@@ -9,4 +9,7 @@ Front-end application for APM.
 1. Install dependencies with `bun install`.
 2. Run app with `bun run dev`.
 3. Build app with `bun run build`.
-4. Run tests with `to be configured`.
+4. Run lint with `bun run lint`.
+5. Check formatting with `bun run prettier-check`.
+6. Fix formatting with `bun run prettier-write`
+7. Run tests with `to be configured`.

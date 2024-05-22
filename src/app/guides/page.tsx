@@ -1,5 +1,4 @@
-import styles from "./guides.module.scss";
-
+// import styles from './guides.module.scss'
 
 export default function Guides() {
   return (

@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+.next/
+
+# Build output and files
+/out/
+/build/
+
+# Misc
+.DS_Store
+
+# Environment variables
+.env*.local
+
+# Misc
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.seed
+*.pid.lock
+*.md

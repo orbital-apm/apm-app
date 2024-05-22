@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import '../styles/main.scss';
-
+import '../styles/main.scss'
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>{children}</body>
     </html>
-  );
+  )
 }
