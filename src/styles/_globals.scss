@@ -1,3 +1,5 @@
+@use 'variables';
+
 *,
 *::before,
 *::after {
@@ -8,9 +10,14 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   line-height: 1.5;
-  background-color: lightblue;
+  background: variables.$bg-color;
   font-family: JetBrainsMono, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
