@@ -9,8 +9,8 @@ const LinkCard = ({ cardText, imgSrc, linkDest }: LinkCardProps) => {
       <div className={styles.linkCardContainer}>
         <div className={styles.linkCardContent}>
           <h1 className={styles.linkCardText}>{cardText}</h1>
-          <Image src={imgSrc} alt={cardText} className={styles.linkCardImage} />
         </div>
+        <Image src={imgSrc} alt={cardText} className={styles.linkCardImage} />
       </div>
     </Link>
   );

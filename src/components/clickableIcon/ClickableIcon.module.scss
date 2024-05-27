@@ -1,6 +1,7 @@
 @use '../../styles/variables';
 
 .clickableIconContainer {
+  display: inline-block;
   height: 2rem;
   width: 2rem;
 }

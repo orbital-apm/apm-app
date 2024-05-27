@@ -6,11 +6,9 @@ import styles from './ClickableIcon.module.scss';
 
 const ClickableIcon = ({ imgSrc, altText, linkDest }: ClickableIconProps) => {
   return (
-    <div className={styles.clickableIconContainer}>
-      <Link href={linkDest}>
-        <Image src={imgSrc} alt={altText} className={styles.clickableIconImage} />
-      </Link>
-    </div>
+    <Link href={linkDest} className={styles.clickableIconContainer}>
+      <Image src={imgSrc} alt={altText} className={styles.clickableIconImage} />
+    </Link>
   );
 };
 
