@@ -1,4 +1,3 @@
-import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -19,3 +18,5 @@ interface ClickableIconProps {
 }
 
 export default ClickableIcon;
+
+// Todo: Generalise ClickableIcon or rename to LinkIcon.
