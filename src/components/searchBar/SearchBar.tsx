@@ -1,23 +1,20 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
+import Image from 'next/image';
 
-import SearchImage from '@/assets/images/icons/search.svg'
+import SearchImage from '@/assets/images/icons/search.svg';
 import styles from './SearchBar.module.scss';
 
 const SearchBar = () => {
   return (
     <div className={styles.searchContainer}>
-      <input
-        className={styles.searchInput}
-        placeholder=""
-      />
-      <button className={styles.searchButton} onClick={() => alert("hello")}>
-        <Image src={SearchImage} alt="Search" className={styles.searchIcon} />
+      <input className={styles.searchInput} placeholder='' />
+      <button className={styles.searchButton} onClick={() => alert('hello')}>
+        <Image src={SearchImage} alt='Search' className={styles.searchIcon} />
       </button>
     </div>
   );
-}
+};
 
 export default SearchBar;
 

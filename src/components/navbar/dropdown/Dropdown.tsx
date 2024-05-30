@@ -1,5 +1,6 @@
-import styles from './Dropdown.module.scss';
 import Link from 'next/link';
+
+import styles from './Dropdown.module.scss';
 
 const Dropdown = ({ labelText, dropdownContent }: DropdownProps) => {
   return (
