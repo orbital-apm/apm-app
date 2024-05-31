@@ -29,7 +29,9 @@ jobs:
         id: cache-dependencies
         uses: actions/cache@v4
         with:
-          path: ~/.bun
+          path: |
+            ~/.bun
+            node_modules
           key: ${{ runner.OS }}-bun-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.OS }}-bun-
