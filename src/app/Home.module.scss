@@ -1,0 +1,12 @@
+@use '../styles/variables';
+
+.mainContainer {
+  padding-top: 1rem;
+}
+
+.cardsContainer {
+  min-height: 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 1rem;
+}

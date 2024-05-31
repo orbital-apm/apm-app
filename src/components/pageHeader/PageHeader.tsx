@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import CartImage from '@/assets/images/icons/shopping-cart.svg';
 import UserImage from '@/assets/images/icons/user.svg';
 import ClickableIcon from '@/components/clickableIcon/ClickableIcon';
@@ -9,7 +11,9 @@ const PageHeader = () => {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerRowContainer}>
-        <h1>actions per minute.</h1>
+        <Link href='/'>
+          <h1>actions per minute.</h1>
+        </Link>
 
         <div className={styles.searchBarContainer}>
           <SearchBar />

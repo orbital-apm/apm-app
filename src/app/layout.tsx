@@ -1,5 +1,6 @@
 import React from 'react';
 
+import PageHeader from '@/components/pageHeader/PageHeader';
 import '../styles/main.scss';
 
 export default function RootLayout({
@@ -9,7 +10,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <PageHeader />
+        {children}
+      </body>
     </html>
   );
 }
