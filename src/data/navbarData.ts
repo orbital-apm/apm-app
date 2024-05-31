@@ -1,31 +1,31 @@
 export interface NavbarItem {
-  labelText: string;
+  label: [string, string];
   dropdownContent: Array<[string, string]>;
 }
 
 export const navbarData: NavbarItem[] = [
   {
-    labelText: 'home',
+    label: ['/', 'home'],
     dropdownContent: [['/', 'home']],
   },
 
   {
-    labelText: 'builder',
+    label: ['/', 'builder'],
     dropdownContent: [['/', 'home']],
   },
 
   {
-    labelText: 'guides',
+    label: ['/', 'guides'],
     dropdownContent: [['/', 'home']],
   },
 
   {
-    labelText: 'marketplace',
+    label: ['/', 'marketplace'],
     dropdownContent: [['/', 'home']],
   },
 
   {
-    labelText: 'support',
+    label: ['/', 'support'],
     dropdownContent: [['/', 'home']],
   },
 ];

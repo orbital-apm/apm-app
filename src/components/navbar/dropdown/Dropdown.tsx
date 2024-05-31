@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
+import { NavbarItem } from '@/data/navbarData'
 import styles from './Dropdown.module.scss';
 
-const Dropdown = ({ labelText, dropdownContent }: DropdownProps) => {
+const Dropdown = ({ label, dropdownContent }: NavbarItem) => {
   return (
     <div className={styles.dropdownContainer}>
       <div className={styles.dropdownTextContainer}>
-        <Link href='/'>{labelText}</Link>
+        <Link href={label[0]}>{label[1]}</Link>
         <span className={styles.arrow} />
       </div>
 
@@ -20,10 +21,5 @@ const Dropdown = ({ labelText, dropdownContent }: DropdownProps) => {
     </div>
   );
 };
-
-interface DropdownProps {
-  labelText: string;
-  dropdownContent: Array<[string, string]>;
-}
 
 export default Dropdown;

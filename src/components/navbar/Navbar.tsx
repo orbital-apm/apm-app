@@ -7,8 +7,8 @@ const Navbar = () => {
     <div className={styles.navbarContainer}>
       {navbarData.map((navbarItem: NavbarItem) => (
         <Dropdown
-          key={navbarItem.labelText}
-          labelText={navbarItem.labelText}
+          key={navbarItem.label[1]}
+          label={navbarItem.label}
           dropdownContent={navbarItem.dropdownContent}
         />
       ))}
