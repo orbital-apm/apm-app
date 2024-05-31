@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { NavbarItem } from '@/data/navbarData'
+import { NavbarItem } from '@/data/navbarData';
 import styles from './Dropdown.module.scss';
 
 const Dropdown = ({ label, dropdownContent }: NavbarItem) => {

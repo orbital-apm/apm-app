@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 import CartImage from '@/assets/images/icons/shopping-cart.svg';
 import UserImage from '@/assets/images/icons/user.svg';
