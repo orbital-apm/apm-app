@@ -1,5 +1,5 @@
-import Register from '@/components/auth/register/Register';
+import { redirect } from 'next/navigation'
 
 export default function Page() {
-  return <Register />;
+  redirect('/');
 }
