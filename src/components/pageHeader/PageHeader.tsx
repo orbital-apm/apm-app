@@ -20,7 +20,7 @@ const PageHeader = () => {
         </div>
 
         <div className={styles.iconsContainer}>
-          <ClickableIcon imgSrc={UserImage} altText='User' linkDest='/user' />
+          <ClickableIcon imgSrc={UserImage} altText='User' linkDest='/login' />
           <ClickableIcon imgSrc={CartImage} altText='Cart' linkDest='/cart' />
         </div>
       </div>

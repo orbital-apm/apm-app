@@ -5,10 +5,9 @@ import styles from './Modal.module.scss';
 const Modal = ({ children }: ModalProps) => {
   return (
     <div className={styles.modalOverlay}>
-      <div className={styles.modalContainer}>
-        {children}
-      </div>
-    </div>);
+      <div className={styles.modalContainer}>{children}</div>
+    </div>
+  );
 };
 
 interface ModalProps {
