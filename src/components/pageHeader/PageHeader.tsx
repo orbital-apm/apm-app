@@ -3,8 +3,8 @@ import Link from 'next/link';
 import CartImage from '@/assets/images/icons/shopping-cart.svg';
 import UserImage from '@/assets/images/icons/user.svg';
 import ClickableIcon from '@/components/clickableIcon/ClickableIcon';
-import SearchBar from '@/components/searchBar/SearchBar';
-import Navbar from '@/components/navbar/Navbar';
+import SearchBar from '@/components/pageHeader/searchBar/SearchBar';
+import Navbar from '@/components/pageHeader/navbar/Navbar';
 import styles from './PageHeader.module.scss';
 
 const PageHeader = () => {
