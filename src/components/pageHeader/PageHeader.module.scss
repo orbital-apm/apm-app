@@ -1,0 +1,30 @@
+@use '../../styles/variables';
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 1rem 0;
+}
+
+.headerRowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+
+.searchBarContainer {
+  flex-grow: 1;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.headerSeparator {
+  border: 0.0625rem solid variables.$alt-bg-color;
+}

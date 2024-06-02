@@ -1,9 +1,19 @@
-// import styles from './home.module.scss'
+import styles from './Home.module.scss';
+import BuildCardImage from '@/assets/images/cards/build-card.png';
+import LearnCardImage from '@/assets/images/cards/learn-card.png';
+import TradeCardImage from '@/assets/images/cards/trade-card.png';
+import LinkCard from '@/components/linkCard/LinkCard';
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-      <h1>Home</h1>
+    <main className={styles.mainContainer}>
+      <div className={styles.cardsContainer}>
+        <LinkCard cardText='build.' imgSrc={BuildCardImage} linkDest='' />
+        <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='' />
+        <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='' />
+      </div>
     </main>
-  )
-}
+  );
+};
+
+export default Home;
