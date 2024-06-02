@@ -1,0 +1,22 @@
+@use '../../styles/variables';
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContainer {
+  background-color: variables.$bg-color;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: variables.$shadow 0 0.1rem 0.1rem;
+}

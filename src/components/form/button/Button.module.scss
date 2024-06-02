@@ -1,0 +1,9 @@
+@use '../../../styles/variables';
+
+.button {
+  background-color: variables.$text-color;
+  color: variables.$bg-color;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+}
