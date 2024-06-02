@@ -1,0 +1,15 @@
+@use '../../../../styles/variables';
+
+.formTabContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.formTabText {
+  border-bottom: 0.125rem solid variables.$alt-bg-color;
+}
+
+.formTabTextSelected {
+  border-bottom: 0.125rem solid variables.$text-color;
+}
