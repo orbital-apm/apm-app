@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const FormTab = ({ redirectPath, text, selected }: FormTabProps) => {
   return (
-    <Link href={redirectPath} className={styles.formTabContainer}>
+    <Link href={redirectPath} className={styles.formTabContainer} replace={true}>
       <span className={selected ? styles.formTabTextSelected : styles.formTabText}>{text}</span>
     </Link>
   );
