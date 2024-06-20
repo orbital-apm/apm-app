@@ -1,4 +1,9 @@
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
+import axios from 'axios';
+import { useMutation } from '@tanstack/react-query';
 
 import styles from './Login.module.scss';
 import Input from '@/components/form/input/Input';
@@ -11,8 +16,26 @@ const tabs: Array<[string, string, boolean]> = [
 ];
 
 const Login = () => {
+  const mutation = useMutation({
+    mutationFn: (data: RequestPayload) => {
+      return axios.post('http://0.0.0.0:8888/v1/auth/token', data);
+    },
+  });
+
+  const handleSubmit = (event: React.FormEvent<LoginFormElement>) => {
+    event.preventDefault();
+
+    const formData = event.currentTarget.elements;
+    const requestPayload: RequestPayload = {
+      email: formData.email.value,
+      password: formData.password.value,
+    };
+
+    mutation.mutate(requestPayload);
+  };
+
   return (
-    <form className={styles.loginContainer}>
+    <form className={styles.loginContainer} onSubmit={handleSubmit}>
       <FormTabs tabs={tabs} />
 
       <div className={styles.formSection}>
@@ -32,5 +55,19 @@ const Login = () => {
     </form>
   );
 };
+
+interface RequestPayload {
+  email: string;
+  password: string;
+}
+
+interface FormElements extends HTMLFormControlsCollection {
+  email: HTMLInputElement;
+  password: HTMLInputElement;
+}
+
+interface LoginFormElement extends HTMLFormElement {
+  readonly elements: FormElements;
+}
 
 export default Login;
