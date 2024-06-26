@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
+import Cookies from 'js-cookie';
 import { useMutation } from '@tanstack/react-query';
 
 import styles from './Login.module.scss';
@@ -18,7 +19,16 @@ const tabs: Array<[string, string, boolean]> = [
 const Login = () => {
   const mutation = useMutation({
     mutationFn: (data: RequestPayload) => {
-      return axios.post('http://0.0.0.0:8888/v1/auth/token', data);
+      return axios.post(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}/v1/auth/token`, data);
+    },
+
+    onSuccess: (response: AxiosResponse<ResponsePayload>) => {
+      Cookies.set('authToken', response.data.access_token, { expires: 7, secure: true });
+    },
+
+    onError: error => {
+      // TODO: Handle errors
+      console.log(`Login failed: ${error}`);
     },
   });
 
@@ -59,6 +69,11 @@ const Login = () => {
 interface RequestPayload {
   email: string;
   password: string;
+}
+
+interface ResponsePayload {
+  access_token: string;
+  token_type: string;
 }
 
 interface FormElements extends HTMLFormControlsCollection {
