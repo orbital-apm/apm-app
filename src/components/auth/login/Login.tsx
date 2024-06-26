@@ -5,6 +5,7 @@ import Link from 'next/link';
 import axios, { AxiosResponse } from 'axios';
 import Cookies from 'js-cookie';
 import { useMutation } from '@tanstack/react-query';
+import { useRouter } from 'next/navigation';
 
 import styles from './Login.module.scss';
 import Input from '@/components/form/input/Input';
@@ -17,6 +18,8 @@ const tabs: Array<[string, string, boolean]> = [
 ];
 
 const Login = () => {
+  const router = useRouter();
+
   const mutation = useMutation({
     mutationFn: (data: RequestPayload) => {
       return axios.post(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}/v1/auth/token`, data);
@@ -24,6 +27,7 @@ const Login = () => {
 
     onSuccess: (response: AxiosResponse<ResponsePayload>) => {
       Cookies.set('authToken', response.data.access_token, { expires: 7, secure: true });
+      router.back();
     },
 
     onError: error => {
