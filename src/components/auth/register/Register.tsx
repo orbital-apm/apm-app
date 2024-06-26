@@ -19,6 +19,11 @@ const Login = () => {
       </div>
 
       <div className={styles.formSection}>
+        <span>username</span>
+        <Input id='username' type='username' placeholder='username' />
+      </div>
+
+      <div className={styles.formSection}>
         <span>password</span>
         <Input id='password' type='password' placeholder='password' />
       </div>
