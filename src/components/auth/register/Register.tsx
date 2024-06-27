@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import Cookies from 'js-cookie';
 import { useMutation } from '@tanstack/react-query';
@@ -10,6 +10,8 @@ import styles from './Register.module.scss';
 import Input from '@/components/form/input/Input';
 import Button from '@/components/form/button/Button';
 import FormTabs from '@/components/form/formTabs/FormTabs';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { setIsAuthenticated } from '@/slices/authSlice';
 
 const tabs: Array<[string, string, boolean]> = [
   ['/login', 'login', false],
@@ -23,6 +25,8 @@ const validatePassword = (password: String, confirmPassword: string) => {
 
 const Register = () => {
   const router = useRouter();
+  const dispatch = useAppDispatch();
+  const [errorMessage, setErrorMessage] = useState('');
 
   const mutation = useMutation({
     mutationFn: (data: RequestPayload) => {
@@ -31,11 +35,12 @@ const Register = () => {
 
     onSuccess: (response: AxiosResponse<ResponsePayload>) => {
       Cookies.set('authToken', response.data.access_token, { expires: 7, secure: true });
+      dispatch(setIsAuthenticated(true));
       router.back();
     },
 
     onError: error => {
-      // TODO: Handle errors
+      setErrorMessage('Registration unsuccessful.')
       console.log(`Register failed: ${error}`);
     },
   });
@@ -64,23 +69,25 @@ const Register = () => {
 
       <div className={styles.formSection}>
         <span>email</span>
-        <Input id='email' type='email' placeholder='email' />
+        <Input id='email' type='email' placeholder='email' required={true} />
       </div>
 
       <div className={styles.formSection}>
         <span>username</span>
-        <Input id='username' type='username' placeholder='username' />
+        <Input id='username' type='username' placeholder='username' required={true} />
       </div>
 
       <div className={styles.formSection}>
         <span>password</span>
-        <Input id='password' type='password' placeholder='password' />
+        <Input id='password' type='password' placeholder='password' required={true} />
       </div>
 
       <div className={styles.formSection}>
         <span>confirm password</span>
-        <Input id='confirmPassword' type='password' placeholder='confirm password' />
+        <Input id='confirmPassword' type='password' placeholder='confirm password' required={true} />
       </div>
+
+      {errorMessage && <span className={styles.errorMessage}>{errorMessage}</span>}
 
       <Button type='submit' text='register' />
     </form>
