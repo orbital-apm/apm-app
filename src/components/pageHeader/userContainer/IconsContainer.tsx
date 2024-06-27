@@ -19,7 +19,7 @@ const IconsContainer = () => {
   useEffect(() => {
     const authToken = Cookies.get('authToken');
     dispatch(setIsAuthenticated(!!authToken));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={styles.iconsContainer}>

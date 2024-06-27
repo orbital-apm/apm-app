@@ -40,7 +40,7 @@ const Register = () => {
     },
 
     onError: error => {
-      setErrorMessage('Registration unsuccessful.')
+      setErrorMessage('Registration unsuccessful.');
       console.log(`Register failed: ${error}`);
     },
   });

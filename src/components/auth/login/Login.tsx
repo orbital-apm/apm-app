@@ -36,7 +36,7 @@ const Login = () => {
     },
 
     onError: error => {
-      setErrorMessage('Login unsuccessful.')
+      setErrorMessage('Login unsuccessful.');
       console.log(`Login failed: ${error}`);
     },
   });
