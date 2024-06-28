@@ -1,9 +1,9 @@
-// import styles from './guides.module.scss'
+import GuidesComponent from '@/components/guides/Guides';
 
 const Guides = () => {
   return (
     <main>
-      <h1>Guides</h1>
+      <GuidesComponent />
     </main>
   );
 };

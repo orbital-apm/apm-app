@@ -3,13 +3,18 @@
 .guidesCardContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  column-gap: 1rem;
+  justify-content: right;
+  column-gap: 2rem;
   padding: 1rem;
   border-radius: 0.5rem;
   transition: 0.2s ease;
+  width: 100%;
 }
 
 .guidesCardContainer:hover {
   box-shadow: variables.$shadow 0 0.2rem 0.2rem;
+}
+
+.guidesCardText {
+  text-align: right;
 }
