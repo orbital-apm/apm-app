@@ -16,7 +16,11 @@ export const navbarData: NavbarItem[] = [
 
   {
     label: ['/guides', 'guides'],
-    dropdownContent: [['/guide', 'intro']],
+    dropdownContent: [
+      ['/guide/intro', 'intro'],
+      ['/guide/keycaps-and-switches', 'keycaps and switches'],
+      ['guides/sizes', 'sizes'],
+    ],
   },
 
   {

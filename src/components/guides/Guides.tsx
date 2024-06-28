@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './Guides.module.scss';
 import ArrowDown from '@/assets/images/icons/arrow-down.svg';
 import GuidesCard from '@/components/guides/guidesCard/GuidesCard';
-import { guidesData, GuidesItem } from '@/data/GuidesData';
+import { guidesData, GuidesItem } from '@/data/guidesData';
 
 const Guides = () => {
   return (
