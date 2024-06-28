@@ -1,11 +1,18 @@
 import React from 'react';
 
 import styles from './Modal.module.scss';
+import CloseButton from '@/components/modal/closeButton/CloseButton';
 
 const Modal = ({ children }: ModalProps) => {
   return (
     <div className={styles.modalOverlay}>
-      <div className={styles.modalContainer}>{children}</div>
+      <div className={styles.modalContainer}>
+        <div className={styles.closeContainer}>
+          <CloseButton />
+        </div>
+
+        {children}
+      </div>
     </div>
   );
 };
