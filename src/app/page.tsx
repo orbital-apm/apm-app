@@ -9,7 +9,7 @@ const Home = () => {
     <main className={styles.mainContainer}>
       <div className={styles.cardsContainer}>
         <LinkCard cardText='build.' imgSrc={BuildCardImage} linkDest='' />
-        <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='' />
+        <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='/guides' />
         <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='' />
       </div>
     </main>
