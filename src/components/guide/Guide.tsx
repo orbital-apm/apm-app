@@ -11,19 +11,19 @@ const Guide = ({ guidesContent }: GuideParams) => {
 
       <Image src={ArrowDown} alt='Arrow down' className={styles.clickableIconImage} />
 
-      <Image src={guidesContent.imgSrc} alt="intro to mechanical keyboards." />
+      <Image src={guidesContent.imgSrc} alt='intro to mechanical keyboards.' />
 
       <p className={styles.guideText} dangerouslySetInnerHTML={createMarkup(guidesContent.text)} />
     </div>
   );
-}
+};
 
 function createMarkup(htmlString: string): { __html: string } {
-  return { __html: htmlString }
+  return { __html: htmlString };
 }
 
 interface GuideParams {
-  guidesContent: GuidesContentParams
+  guidesContent: GuidesContentParams;
 }
 
 export default Guide;

@@ -3,9 +3,9 @@ import { StaticImageData } from 'next/image';
 import IntroMainImg from '@/assets/images/guides/intro/intro-1.png';
 
 export interface GuidesContentParams {
-  title: string,
-  imgSrc: StaticImageData,
-  text: string,
+  title: string;
+  imgSrc: StaticImageData;
+  text: string;
 }
 
 export const guidesContentData: { [key: string]: GuidesContentParams } = {
