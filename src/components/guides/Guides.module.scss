@@ -1,0 +1,16 @@
+@use '../../styles/variables';
+
+.guidesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.guidesTitle {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.cardsContainer {
+}
