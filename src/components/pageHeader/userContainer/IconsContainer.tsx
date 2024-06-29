@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import styles from './IconsContainer.module.scss';
 import CartImage from '@/assets/images/icons/shopping-cart.svg';
 import UserImage from '@/assets/images/icons/user.svg';
-import ClickableIcon from '@/components/clickableIcon/ClickableIcon';
+import ClickableIcon from '@/components/ui/clickableIcon/ClickableIcon';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { setIsAuthenticated } from '@/slices/authSlice';

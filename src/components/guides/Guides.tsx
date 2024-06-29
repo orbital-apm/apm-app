@@ -10,9 +10,9 @@ const Guides = () => {
     <div className={styles.guidesContainer}>
       <h2 className={styles.guidesTitle}>start your journey here.</h2>
 
-      <Image src={ArrowDown} alt='Arrow down' className={styles.clickableIconImage} />
+      <Image src={ArrowDown} alt='Arrow down' />
 
-      <div className={styles.cardsContainter}>
+      <div>
         {guidesData.map((guidesItem: GuidesItem) => (
           <GuidesCard
             key={guidesItem.text}
