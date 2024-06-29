@@ -7,24 +7,22 @@ import { guidesData, GuidesItem } from '@/data/guidesData';
 
 const Guides = () => {
   return (
-    <main>
-      <div className={styles.guidesContainer}>
-        <h2 className={styles.guidesTitle}>start your journey here.</h2>
+    <div className={styles.guidesContainer}>
+      <h2 className={styles.guidesTitle}>start your journey here.</h2>
 
-        <Image src={ArrowDown} alt='Arrow down' className={styles.clickableIconImage} />
+      <Image src={ArrowDown} alt='Arrow down' className={styles.clickableIconImage} />
 
-        <div className={styles.cardsContainter}>
-          {guidesData.map((guidesItem: GuidesItem) => (
-            <GuidesCard
-              key={guidesItem.text}
-              linkDest={guidesItem.linkDest}
-              text={guidesItem.text}
-              imgSrc={guidesItem.imgSrc}
-            />
-          ))}
-        </div>
+      <div className={styles.cardsContainter}>
+        {guidesData.map((guidesItem: GuidesItem) => (
+          <GuidesCard
+            key={guidesItem.text}
+            linkDest={guidesItem.linkDest}
+            text={guidesItem.text}
+            imgSrc={guidesItem.imgSrc}
+          />
+        ))}
       </div>
-    </main>
+    </div>
   );
 };
 
