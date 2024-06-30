@@ -2,7 +2,7 @@ import styles from './Home.module.scss';
 import BuildCardImage from '@/assets/images/cards/build-card.png';
 import LearnCardImage from '@/assets/images/cards/learn-card.png';
 import TradeCardImage from '@/assets/images/cards/trade-card.png';
-import LinkCard from '@/components/linkCard/LinkCard';
+import LinkCard from '@/components/home/linkCard/LinkCard';
 
 const Home = () => {
   return (
