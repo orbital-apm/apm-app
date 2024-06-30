@@ -1,4 +1,4 @@
-import GuideComponent from '@/components/guide/Guide';
+import GuideComponent from '@/components/guides/guide/Guide';
 import { guidesContentData } from '@/data/guidesContentData';
 import { redirect } from 'next/navigation';
 
