@@ -10,7 +10,7 @@ export const navbarData: NavbarItem[] = [
   },
 
   {
-    label: ['/', 'builder'],
+    label: ['/builder', 'builder'],
     dropdownContent: [['/', 'home']],
   },
 
