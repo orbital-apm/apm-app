@@ -7,7 +7,7 @@ import ArrowDown from '@/assets/images/icons/arrow-down.svg';
 const Guide = ({ guidesContent }: GuideParams) => {
   return (
     <div className={styles.guideContainer}>
-      <h2 className={styles.guideTitle}>{guidesContent.title}</h2>
+      <h2 className='title'>{guidesContent.title}</h2>
 
       <Image src={ArrowDown} alt='Arrow down' className={styles.clickableIconImage} />
 
