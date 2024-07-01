@@ -1,5 +1,5 @@
 import styles from './FormTabs.module.scss';
-import FormTab from '@/components/form/formTabs/formTab/FormTab';
+import FormTab from '@/components/ui/form/formTabs/formTab/FormTab';
 
 const FormTabs = ({ tabs }: FormTabsProps) => {
   return (

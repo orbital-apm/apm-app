@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './Modal.module.scss';
-import CloseButton from '@/components/modal/closeButton/CloseButton';
+import CloseButton from '@/components/ui/modal/closeButton/CloseButton';
 
 const Modal = ({ children }: ModalProps) => {
   return (

@@ -8,9 +8,9 @@ import { useMutation } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 
 import styles from './Login.module.scss';
-import Input from '@/components/form/input/Input';
-import Button from '@/components/form/button/Button';
-import FormTabs from '@/components/form/formTabs/FormTabs';
+import Input from '@/components/ui/form/input/Input';
+import Button from '@/components/ui/form/button/Button';
+import FormTabs from '@/components/ui/form/formTabs/FormTabs';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { setIsAuthenticated } from '@/slices/authSlice';
 
