@@ -1,0 +1,45 @@
+@use '../../../styles/variables';
+
+.builderCostsContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    '. subtotalText subtotalAmount'
+    '. shippingText shippingAmount'
+    '. totalText totalAmount';
+  align-items: center;
+  justify-items: center;
+  grid-row-gap: 0.25rem;
+}
+
+.builderCostsAmount {
+  font-weight: 700;
+}
+
+.builderCostsSubtotalText {
+  grid-area: subtotalText;
+}
+
+.builderCostsSubtotalAmount {
+  @extend .builderCostsAmount;
+  grid-area: subtotalAmount;
+}
+
+.builderCostsShippingText {
+  grid-area: shippingText;
+}
+
+.builderCostsShippingAmount {
+  @extend .builderCostsAmount;
+  grid-area: shippingAmount;
+}
+
+.builderCostsTotalText {
+  grid-area: totalText;
+}
+
+.builderCostsTotalAmount {
+  @extend .builderCostsAmount;
+  grid-area: totalAmount;
+}

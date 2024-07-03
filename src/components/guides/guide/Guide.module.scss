@@ -1,4 +1,4 @@
-@use '../../styles/variables';
+@use '../../../styles/variables';
 
 .guideContainer {
   display: flex;
@@ -6,11 +6,6 @@
   align-items: center;
   row-gap: 2rem;
   margin-top: 4rem;
-}
-
-.guideTitle {
-  font-weight: 100;
-  font-size: 3rem;
 }
 
 .guideText {

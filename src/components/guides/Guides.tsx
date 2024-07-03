@@ -8,7 +8,7 @@ import { guidesData, GuidesItem } from '@/data/guidesData';
 const Guides = () => {
   return (
     <div className={styles.guidesContainer}>
-      <h2 className={styles.guidesTitle}>start your journey here.</h2>
+      <h2 className='title'>start your journey here.</h2>
 
       <Image src={ArrowDown} alt='Arrow down' />
 
