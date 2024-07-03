@@ -6,7 +6,7 @@ import builderReducer from '@/slices/builderSlice';
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    builder: builderReducer
+    builder: builderReducer,
   },
 });
 

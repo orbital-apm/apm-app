@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import styles from './Builder.module.scss';
 import ArrowDown from '@/assets/images/icons/arrow-down.svg';
-import KeyboardLayers from '@/assets/images/builder/keyboard-layers.png'
+import KeyboardLayers from '@/assets/images/builder/keyboard-layers.png';
 import BuilderPart from '@/components/builder/builderPart/BuilderPart';
 import BuilderCosts from '@/components/builder/builderCosts/BuilderCosts';
 
@@ -34,6 +34,6 @@ const Builder = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Builder;
