@@ -10,18 +10,21 @@ export interface Keycaps {
   id: string;
   name: string;
   price: string;
+  imageUrl: string;
 }
 
 export interface Switches {
   id: string;
   name: string;
   price: string;
+  imageUrl: string;
 }
 
 export interface Kit {
   id: string;
   name: string;
   price: string;
+  imageUrl: string;
 }
 
 const initialState: BuilderState = {

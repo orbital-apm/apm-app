@@ -17,6 +17,7 @@
     'image switches'
     'image kit'
     'image costs';
+  align-items: center;
 }
 
 .builderImg {
@@ -25,20 +26,16 @@
 
 .builderKeycaps {
   grid-area: keycaps;
-  align-self: center;
 }
 
 .builderSwitches {
   grid-area: switches;
-  align-self: center;
 }
 
 .builderKits {
   grid-area: kit;
-  align-self: end;
 }
 
 .builderCosts {
   grid-area: costs;
-  align-self: center;
 }
