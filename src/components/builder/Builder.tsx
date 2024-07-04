@@ -8,11 +8,18 @@ import KeyboardLayers from '@/assets/images/builder/keyboard-layers.png';
 import BuilderPart from '@/components/builder/builderPart/BuilderPart';
 import BuilderCosts from '@/components/builder/builderCosts/BuilderCosts';
 import { useAppSelector } from '@/hooks/useAppSelector';
+import { Keycaps, Kit, Switches } from '@/slices/builderSlice';
 
 const Builder = () => {
-  const keycaps = useAppSelector(state => state.builder.keycaps);
-  const switches = useAppSelector(state => state.builder.switches);
-  const kit = useAppSelector(state => state.builder.kit);
+  const keycaps: Keycaps | null = useAppSelector(state => state.builder.keycaps);
+  const switches: Switches | null = useAppSelector(state => state.builder.switches);
+  const kit: Kit | null = useAppSelector(state => state.builder.kit);
+
+  const parts = {
+    keycaps: keycaps,
+    switches: switches,
+    kit: kit,
+  };
 
   return (
     <div className={styles.builderContainer}>
@@ -28,15 +35,15 @@ const Builder = () => {
         </div>
 
         <div className={styles.builderSwitches}>
-          <BuilderPart part={switches} linkText='keycaps' linkDest='/parts/switches' />
+          <BuilderPart part={switches} linkText='switches' linkDest='/parts/switches' />
         </div>
 
         <div className={styles.builderKits}>
-          <BuilderPart part={kit} linkText='keycaps' linkDest='/parts/kits' />
+          <BuilderPart part={kit} linkText='kits' linkDest='/parts/kits' />
         </div>
 
         <div className={styles.builderCosts}>
-          <BuilderCosts />
+          <BuilderCosts parts={parts} />
         </div>
       </div>
     </div>

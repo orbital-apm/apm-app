@@ -9,8 +9,9 @@
 }
 
 .builderGridContainer {
+  width: 100%;
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 1fr 2fr 1fr;
   grid-template-areas:
     'image keycaps'
@@ -22,6 +23,7 @@
 
 .builderImg {
   grid-area: image;
+  justify-self: right;
 }
 
 .builderKeycaps {
