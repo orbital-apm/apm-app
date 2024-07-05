@@ -9,19 +9,22 @@ interface BuilderState {
 export interface Keycaps {
   id: string;
   name: string;
-  price: string;
+  price: number;
+  imageUrl: string;
 }
 
 export interface Switches {
   id: string;
   name: string;
-  price: string;
+  price: number;
+  imageUrl: string;
 }
 
 export interface Kit {
   id: string;
   name: string;
-  price: string;
+  price: number;
+  imageUrl: string;
 }
 
 const initialState: BuilderState = {
