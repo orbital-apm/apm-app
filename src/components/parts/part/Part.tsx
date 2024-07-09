@@ -16,9 +16,13 @@ const Part = () => {
         <PartCard />
         <PartCard />
         <PartCard />
+        <PartCard />
+        <PartCard />
+        <PartCard />
+        <PartCard />
       </div>
     </div>
   );
-}
+};
 
 export default Part;
