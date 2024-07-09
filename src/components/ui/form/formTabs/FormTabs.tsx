@@ -12,7 +12,7 @@ const FormTabs = ({ tabs }: FormTabsProps) => {
 };
 
 interface FormTabsProps {
-  tabs: Array<[string, string, boolean]>;
+  tabs: [string, string, boolean][];
 }
 
 export default FormTabs;

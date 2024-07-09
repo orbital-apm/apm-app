@@ -1,6 +1,6 @@
 export interface NavbarItem {
   label: [string, string];
-  dropdownContent: Array<[string, string]>;
+  dropdownContent: [string, string][];
 }
 
 export const navbarData: NavbarItem[] = [

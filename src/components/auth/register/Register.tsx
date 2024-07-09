@@ -13,12 +13,12 @@ import FormTabs from '@/components/ui/form/formTabs/FormTabs';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { setIsAuthenticated } from '@/slices/authSlice';
 
-const tabs: Array<[string, string, boolean]> = [
+const tabs: [string, string, boolean][] = [
   ['/login', 'login', false],
   ['/register', 'register', true],
 ];
 
-const validatePassword = (password: String, confirmPassword: string) => {
+const validatePassword = (password: string, confirmPassword: string) => {
   // TODO: Add password validation
   return password === confirmPassword;
 };

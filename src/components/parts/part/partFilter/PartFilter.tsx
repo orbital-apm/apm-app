@@ -7,15 +7,15 @@ const PartFilter = () => {
   return (
     <div className={styles.partFilterContainer}>
       <FilterCheckboxes
-        filterName={'Availability'}
+        filterName={'Placeholder'}
         options={{ 'in stock': false, 'out of stock': false }}
-        onFilterChange={(filterName: string, optionValue: string) => alert('hi')}
+        onFilterChange={(filterName: string, optionValue: string) => alert(`${filterName}, ${optionValue}`)}
       />
 
       <FilterCheckboxes
-        filterName={'Availability'}
-        options={{ 'in stock': false, 'out of stock': false }}
-        onFilterChange={(filterName: string, optionValue: string) => alert('hi')}
+        filterName={'Placeholder'}
+        options={{ hotel: false, trivago: false }}
+        onFilterChange={(filterName: string, optionValue: string) => alert(`${filterName}, ${optionValue}`)}
       />
     </div>
   );
