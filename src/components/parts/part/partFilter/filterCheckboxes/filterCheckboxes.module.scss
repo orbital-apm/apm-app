@@ -1,0 +1,22 @@
+@use '../../../../../styles/variables';
+
+.filterCheckboxesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.filterCheckboxesFilterName {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.filterCheckboxContainer {
+  display: flex;
+  column-gap: 0.5rem;
+  padding: 0 1rem;
+}

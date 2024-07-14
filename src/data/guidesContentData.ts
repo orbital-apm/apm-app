@@ -11,7 +11,7 @@ export interface GuidesContentParams {
   text: string;
 }
 
-export const guidesContentData: { [key: string]: GuidesContentParams } = {
+export const guidesContentData: Record<string, GuidesContentParams> = {
   intro: {
     title: 'intro to mechanical keyboards.',
     imgSrc: IntroMainImg,
