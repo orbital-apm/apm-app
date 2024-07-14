@@ -14,7 +14,7 @@ import FormTabs from '@/components/ui/form/formTabs/FormTabs';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { setIsAuthenticated } from '@/slices/authSlice';
 
-const tabs: Array<[string, string, boolean]> = [
+const tabs: [string, string, boolean][] = [
   ['/login', 'login', true],
   ['/register', 'register', false],
 ];
