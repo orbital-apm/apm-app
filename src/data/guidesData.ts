@@ -17,7 +17,7 @@ export const guidesData: GuidesItem[] = [
     imgSrc: IntroImg,
   },
   {
-    linkDest: '/guides/keycaps-and-switches',
+    linkDest: '/guides/keycaps_and_switches',
     text: 'a guide to keycaps and switches.',
     imgSrc: KeycapsAndSwitchesImg,
   },
