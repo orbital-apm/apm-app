@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.cardsContainer}>
-        <LinkCard cardText='build.' imgSrc={BuildCardImage} linkDest='' />
+        <LinkCard cardText='build.' imgSrc={BuildCardImage} linkDest='/builder' />
         <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='/guides' />
         <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='' />
       </div>

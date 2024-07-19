@@ -10,14 +10,16 @@ const Dropdown = ({ label, dropdownContent }: NavbarItem) => {
         <Link href={label[0]}>{label[1]}</Link>
         <span className={styles.arrow} />
       </div>
-
-      <ul className={styles.dropdownContent}>
-        {dropdownContent.map(([redirectPath, text]) => (
-          <li key={text}>
-            <Link href={redirectPath}>{text}</Link>
-          </li>
-        ))}
-      </ul>
+      
+      {dropdownContent && (
+        <ul className={styles.dropdownContent}>
+          {dropdownContent.map(([redirectPath, text]) => (
+            <li key={text}>
+              <Link href={redirectPath}>{text}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

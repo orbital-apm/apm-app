@@ -1,8 +1,10 @@
 import { StaticImageData } from 'next/image';
 
 import IntroImg from '@/assets/images/guides/guideCards/intro.png';
-import KeycapsAndSwitchesImg from '@/assets/images/guides/guideCards/keycaps-and-switches.png';
+import KeycapsImg from '@/assets/images/guides/guideCards/keycaps.png';
+import SwitchesImg from '@/assets/images/guides/guideCards/switches.png'
 import SizesImg from '@/assets/images/guides/guideCards/sizes.png';
+
 
 export interface GuidesItem {
   linkDest: string;
@@ -17,9 +19,14 @@ export const guidesData: GuidesItem[] = [
     imgSrc: IntroImg,
   },
   {
-    linkDest: '/guides/keycaps_and_switches',
-    text: 'a guide to keycaps and switches.',
-    imgSrc: KeycapsAndSwitchesImg,
+    linkDest: '/guides/keycaps',
+    text: 'a guide to keycaps.',
+    imgSrc: KeycapsImg,
+  },
+  {
+    linkDest: '/guides/switches',
+    text: 'a guide to switches.',
+    imgSrc: SwitchesImg,
   },
   {
     linkDest: '/guides/sizes',

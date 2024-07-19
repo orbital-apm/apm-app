@@ -1,8 +1,9 @@
 import { StaticImageData } from 'next/image';
 
 import IntroMainImg from '@/assets/images/guides/intro/intro-1.png';
-import KeySwitchMainImg from '@/assets/images/guides/keycaps_and_switches/keycaps_and_switches-1.png';
-import SizesMainImg from '@/assets/images/guides/sizes/sizes-1.jpg'
+import KeycapMainImg from '@/assets/images/guides/keycaps/keycaps-1.png';
+import SizesMainImg from '@/assets/images/guides/sizes/sizes-1.png'
+import SwitchesMainImg from '@/assets/images/guides/switches/switches-1.png';
 
 export interface GuidesContentParams {
   title: string;
@@ -24,9 +25,9 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     So, are you ready to dive into the world of mechanical keyboards? Trust me, once you start, you'll wonder how you ever typed on anything else. It's not just about typing faster or more accurately (though that can happen too). It's about enjoying every single keystroke. Welcome to your new obsession!
     `,
   },
-  keycaps_and_switches: {
-    title: 'a guide to keycaps and switches.',
-    imgSrc: KeySwitchMainImg,
+  keycaps: {
+    title: 'a guide to keycaps.',
+    imgSrc: KeycapMainImg,
     text: `
     Alright, buckle up, keyboard newbie! We're about to dive into the colorful, clicky world of keycaps. You know those little buttons you press on your keyboard? Yeah, those are keycaps, and they're way cooler than you might think! So, what's the big deal with keycaps? Well, imagine if you could change how your keyboard looks and feels just by swapping out these little plastic pieces. That's exactly what keycaps let you do!<br><br>
     First off, let's talk materials. Most keycaps are made from either ABS or PBT plastic. ABS is like the vanilla ice cream of keycaps - it's everywhere and gets the job done. But PBT? That's the gourmet stuff. It's tougher, doesn't get shiny from use, and some people swear it feels better under your fingers.<br><br>
@@ -36,6 +37,24 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     One last thing to keep in mind - make sure you're getting keycaps that fit your keyboard. Different keyboards use different layouts and sizes, especially for those pesky bottom row keys. But don't worry, most keycap sets come with enough options to fit most boards.
     So there you have it - the wonderful world of keycaps! Whether you want to jazz up your typing experience, make your keyboard match your room, or just have something fun to fidget with during long Zoom calls, keycaps are your new best friend. Welcome to the rabbit hole, my friend. Your wallet might hate you, but your fingers (and eyes) will thank you!
     `,
+  },
+  switches: {
+    title: 'a guide to switches.',
+    imgSrc: SwitchesMainImg,
+    text: `
+    Alright, keyboard rookie, it's time to get switched on to... well, switches! These little gadgets are the true MVPs of mechanical keyboards, and they're about to blow your mind.
+    So, what's a switch? It's basically the mechanism under each key that registers when you've pressed it. Think of it as the heartbeat of your keyboard. Every time you tap a key, you're activating a switch. Cool, right?<br><br>
+    Now, here's where it gets fun. There are more types of switches out there than flavors at an ice cream parlor, but let's break 'em down into three main categories:<br><br>
+    1. Linear: These are the smooth operators. When you press down, it's one continuous motion - no bumps, no clicks, just a smooth ride all the way down. Gamers often love these because they're fast and consistent.<br><br>
+    2. Tactile: Imagine driving over a speed bump - that's what tactile switches feel like. There's a little bump partway through the keystroke that lets you know, "Yep, you've activated the key!" It's like a little high-five for your fingers.<br><br>    
+    3. Clicky: These are the loud and proud switches. Not only do you feel a bump, but you hear a satisfying "click" too. It's like your keyboard is applauding every letter you type. Just maybe don't use these in a quiet library!<br><br>
+    Now, within these categories, there's a whole world of variation. You've got switches that are light as a feather, and others that feel like you're pushing through peanut butter. Some have a bump so subtle it's like a whisper, others feel like you're popping bubble wrap with every keystroke.
+    The most famous switch maker is Cherry, with their MX line. Cherry MX Reds are smooth linear switches, Browns are tactile, and Blues are the classic clicky type. But there's a whole rainbow of other colors, each with its own feel.
+    But wait, there's more! You've got boutique switch makers like Gateron, Kailh, and Zealpc creating switches that'll make your fingers sing. Some switches even let you swap out springs or stems to customize the feel even further. It's like building your own little finger playground!
+    Here's a pro tip: before you commit to a whole keyboard of one switch, try a switch tester. It's like a sampler platter for your fingers, letting you try out different switches to see what tickles your fancy.<br><br>
+    And get this - some keyboards now let you hot-swap switches. That means you can pop different switches in and out without soldering. It's like being able to change the engine in your car just by opening the hood!<br><br>
+    So there you have it - the wonderful world of switches. Whether you want a keyboard that feels like typing on clouds, or one that gives you a mini finger workout with every email, there's a switch out there for you. Welcome to the club, switch newbie. Your fingers are about to go on the adventure of a lifetime!
+    `
   },
   sizes: {
     title: 'a guide to keyboard sizes.',
