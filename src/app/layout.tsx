@@ -12,14 +12,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Provider>
-      <html lang='en'>
-        <body>
+    <html lang='en'>
+      <body>
+        <Provider>
           <PageHeader />
           {auth}
           {children}
-        </body>
-      </html>
-    </Provider>
+        </Provider>
+      </body>
+    </html>
   );
 }
