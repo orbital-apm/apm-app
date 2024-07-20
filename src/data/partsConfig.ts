@@ -12,103 +12,103 @@ export const partsConfig: Record<string, PartConfig> = {
   keycaps: {
     path: '/parts/keycaps',
     filters: [
-      {
-        name: 'manufacturer',
-        options: ['a', 'b']
-      },
+      // {
+      //   name: 'manufacturer',
+      //   options: ['a', 'b']
+      // },
       {
         name: 'layout',
-        options: ['a', 'b']
+        options: ['ansi', 'iso']
       },
       {
         name: 'material',
-        options: ['a', 'b']
+        options: ['abs', 'pbt', 'pc', 'ceramic']
       },
       {
         name: 'profile',
-        options: ['a', 'b']
+        options: ['cherry', 'dsa', 'kat', 'oem', 'sa', 'xda']
       },
       {
         name: 'availability',
-        options: ['a', 'b']
+        options: ['in stock', 'out of stock']
       }
     ]
   },
   kits: {
     path: '/parts/kits',
     filters: [
-      {
-        name: 'manufacturer',
-        options: ['a', 'b']
-      },
+      // {
+      //   name: 'manufacturer',
+      //   options: ['a', 'b']
+      // },
       {
         name: 'layout size',
-        options: ['a', 'b']
+        options: ['40%', '60%', '65%', '75%', '96%', '100%']
       },
       {
         name: 'layout standard',
-        options: ['a', 'b']
+        options: ['ansi', 'iso']
       },
       {
         name: 'layout ergo',
-        options: ['a', 'b']
+        options: ['alice', 'split', 'ortholinear']
       },
       {
         name: 'hotswappable',
-        options: ['a', 'b']
+        options: ['hotswappable', 'non-hotswappable']
       },
       {
         name: 'knob support',
-        options: ['a', 'b']
+        options: ['knob support', 'no knob support']
       },
       {
         name: 'rgb',
-        options: ['a', 'b']
+        options: ['rgb', 'non-rgb']
       },
       {
         name: 'display support',
-        options: ['a', 'b']
+        options: ['display support', 'no display support']
       },
       {
         name: 'connection',
-        options: ['a', 'b']
+        options: ['wired', 'wireless']
       },
       {
         name: 'mount style',
-        options: ['a', 'b']
+        options: ['top mount', 'gasket mount', 'pcb mount', 'plate mount', 'tray mount']
       },
       {
         name: 'material',
-        options: ['a', 'b']
+        options: ['metal', 'plastic']
       },
       {
         name: 'availability',
-        options: ['a', 'b']
+        options: ['in stock', 'out of stock']
       }
     ]
   },
   switches: {
     path: '/parts/switches',
     filters: [
-      {
-        name: 'manufacturer',
-        options: ['a', 'b']
-      },
-      {
-        name: 'actuation force',
-        options: ['a', 'b']
-      },
-      {
-        name: 'travel distance',
-        options: ['a', 'b']
-      },
+      // {
+      //   name: 'manufacturer',
+      //   options: ['a', 'b']
+      // },
+      // {
+      //   name: 'actuation force',
+      //   options: ['a', 'b']
+      // },
+      // {
+      //   name: 'travel distance',
+      //   options: ['a', 'b']
+      // },
       {
         name: 'switch type',
-        options: ['a', 'b']
+        options: ['linear', 'tactile', 'clicky']
       },
       {
         name: 'availability',
-        options: ['a', 'b']
+        options: ['in stock', 'out of stock']
       }
     ]
   }
