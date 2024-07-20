@@ -18,7 +18,7 @@ const Builder = () => {
   const parts = {
     keycaps: keycaps,
     switches: switches,
-    kit: kit,
+    kit: kit
   };
 
   return (

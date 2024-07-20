@@ -16,7 +16,7 @@ import { setIsAuthenticated } from '@/slices/authSlice';
 
 const tabs: [string, string, boolean][] = [
   ['/login', 'login', true],
-  ['/register', 'register', false],
+  ['/register', 'register', false]
 ];
 
 const Login = () => {
@@ -38,7 +38,7 @@ const Login = () => {
     onError: error => {
       setErrorMessage('Login unsuccessful.');
       console.log(`Login failed: ${error}`);
-    },
+    }
   });
 
   const handleSubmit = (event: React.FormEvent<LoginFormElement>) => {
@@ -47,7 +47,7 @@ const Login = () => {
     const formData = event.currentTarget.elements;
     const requestPayload: RequestPayload = {
       email: formData.email.value,
-      password: formData.password.value,
+      password: formData.password.value
     };
 
     mutation.mutate(requestPayload);

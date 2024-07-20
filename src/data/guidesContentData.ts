@@ -20,6 +20,6 @@ export const guidesContentData: Record<string, GuidesContentParams> = {
     And we haven't even talked about looks yet! Mechanical keyboards come in all sorts of styles. Want something that lights up like a Christmas tree? Done. Prefer a sleek, professional look? No problem. You can even mix and match keycaps to create your own unique style.<br><br>
     Now, I know what you're thinking: "This sounds expensive." And yeah, some mechanical keyboards can cost a pretty penny. But here's the thing – they're built to last. While your regular keyboard might give up the ghost after a year or two, a good mechanical keyboard can keep clicking away for a decade or more.<br><br>
     So, are you ready to dive into the world of mechanical keyboards? Trust me, once you start, you'll wonder how you ever typed on anything else. It's not just about typing faster or more accurately (though that can happen too). It's about enjoying every single keystroke. Welcome to your new obsession!
-    `,
-  },
+    `
+  }
 };

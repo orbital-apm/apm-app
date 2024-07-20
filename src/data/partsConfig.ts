@@ -14,102 +14,102 @@ export const partsConfig: Record<string, PartConfig> = {
     filters: [
       {
         name: 'manufacturer',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'layout',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'material',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'profile',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'availability',
-        options: ['a', 'b'],
-      },
-    ],
+        options: ['a', 'b']
+      }
+    ]
   },
   kits: {
     path: '/parts/kits',
     filters: [
       {
         name: 'manufacturer',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'layout size',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'layout standard',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'layout ergo',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'hotswappable',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'knob support',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'rgb',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'display support',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'connection',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'mount style',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'material',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'availability',
-        options: ['a', 'b'],
-      },
-    ],
+        options: ['a', 'b']
+      }
+    ]
   },
   switches: {
     path: '/parts/switches',
     filters: [
       {
         name: 'manufacturer',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'actuation force',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'travel distance',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'switch type',
-        options: ['a', 'b'],
+        options: ['a', 'b']
       },
       {
         name: 'availability',
-        options: ['a', 'b'],
-      },
-    ],
-  },
+        options: ['a', 'b']
+      }
+    ]
+  }
 };

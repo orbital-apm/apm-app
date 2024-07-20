@@ -30,7 +30,7 @@ export interface Kit {
 const initialState: BuilderState = {
   keycaps: null,
   switches: null,
-  kit: null,
+  kit: null
 };
 
 const builderSlice = createSlice({
@@ -45,8 +45,8 @@ const builderSlice = createSlice({
     },
     setKit: (state, action: PayloadAction<Kit>) => {
       state.kit = action.payload;
-    },
-  },
+    }
+  }
 });
 
 export const { setKeycaps, setSwitches, setKit } = builderSlice.actions;
