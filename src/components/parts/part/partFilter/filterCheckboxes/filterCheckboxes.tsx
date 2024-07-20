@@ -7,9 +7,9 @@ const FilterCheckboxes = ({ filterName, options, onFilterChange }: FilterCheckbo
     <div className={styles.filterCheckboxesContainer}>
       <span className={styles.filterCheckboxesFilterName}>{filterName}</span>
 
-      {Object.entries(options).map(([optionValue, isChecked]) => (
+      {options.map(optionValue => (
         <label key={optionValue} className={styles.filterCheckboxContainer}>
-          <input type='checkbox' checked={isChecked} onChange={() => onFilterChange(filterName, optionValue)} />
+          <input type='checkbox' onChange={() => onFilterChange(filterName, optionValue)} />
           <span>{optionValue}</span>
         </label>
       ))}
@@ -19,7 +19,7 @@ const FilterCheckboxes = ({ filterName, options, onFilterChange }: FilterCheckbo
 
 interface FilterCheckboxesParams {
   filterName: string;
-  options: Record<string, boolean>;
+  options: string[];
   onFilterChange: (filterName: string, optionValue: string) => void;
 }
 
