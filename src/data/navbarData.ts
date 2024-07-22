@@ -14,7 +14,8 @@ export const navbarData: NavbarItem[] = [
       ['/parts/switches', 'switches'],
       ['/parts/keycaps', 'keycaps'],
       ['/parts/kits', 'kits'],
-      ['/parts/lubricants', 'lubricants']],
+      ['/parts/lubricants', 'lubricants'],
+    ],
   },
   {
     label: ['/guides', 'guides'],

@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image';
 
 import IntroMainImg from '@/assets/images/guides/intro/intro-1.png';
 import KeycapMainImg from '@/assets/images/guides/keycaps/keycaps-1.png';
-import SizesMainImg from '@/assets/images/guides/sizes/sizes-1.png'
+import SizesMainImg from '@/assets/images/guides/sizes/sizes-1.png';
 import SwitchesMainImg from '@/assets/images/guides/switches/switches-1.png';
 
 export interface GuidesContentParams {
@@ -54,7 +54,7 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     Here's a pro tip: before you commit to a whole keyboard of one switch, try a switch tester. It's like a sampler platter for your fingers, letting you try out different switches to see what tickles your fancy.<br><br>
     And get this - some keyboards now let you hot-swap switches. That means you can pop different switches in and out without soldering. It's like being able to change the engine in your car just by opening the hood!<br><br>
     So there you have it - the wonderful world of switches. Whether you want a keyboard that feels like typing on clouds, or one that gives you a mini finger workout with every email, there's a switch out there for you. Welcome to the club, switch newbie. Your fingers are about to go on the adventure of a lifetime!
-    `
+    `,
   },
   sizes: {
     title: 'a guide to keyboard sizes.',
@@ -73,6 +73,5 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     So there you have it - the wild and wonderful world of keyboard sizes and layouts. Whether you want a keyboard that dominates your desk or one that could fit in your pocket, there's a size and layout out there for you. <br><br>
     Welcome to the world where size doesn't just matter - it's everything!
     `,
-  }
+  },
 };
-

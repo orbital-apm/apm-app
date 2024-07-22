@@ -2,9 +2,8 @@ import { StaticImageData } from 'next/image';
 
 import IntroImg from '@/assets/images/guides/guideCards/intro.png';
 import KeycapsImg from '@/assets/images/guides/guideCards/keycaps.png';
-import SwitchesImg from '@/assets/images/guides/guideCards/switches.png'
+import SwitchesImg from '@/assets/images/guides/guideCards/switches.png';
 import SizesImg from '@/assets/images/guides/guideCards/sizes.png';
-
 
 export interface GuidesItem {
   linkDest: string;

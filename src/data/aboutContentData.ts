@@ -1,5 +1,11 @@
-import AboutComponent from '@/components/about/About';
 import AboutMainImg from '@/assets/images/about/placeholder-1.jpg';
+import { StaticImageData } from 'next/image';
+
+export interface AboutContentParams {
+  title: string;
+  imgSrc: StaticImageData;
+  text: string;
+}
 
 const aboutUsContent = {
   title: 'about us.',
@@ -10,13 +16,3 @@ const aboutUsContent = {
     This web app is dedicated to helping you find the ideal keyboard setup that'll make your fingers dance across the keys. Whether you're a typing speed demon, a coding wizard, or just someone who appreciates the satisfying clack of a well-built keyboard, we're here to support your journey in the wonderful world of mechanical keyboards.
     `,
 };
-
-const About = () => {
-  return (
-    <main>
-      <AboutComponent content={aboutUsContent} />
-    </main>
-  );
-};
-
-export default About;

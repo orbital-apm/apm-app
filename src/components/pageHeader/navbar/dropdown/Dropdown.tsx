@@ -10,7 +10,7 @@ const Dropdown = ({ label, dropdownContent }: NavbarItem) => {
         <Link href={label[0]}>{label[1]}</Link>
         <span className={styles.arrow} />
       </div>
-      
+
       {dropdownContent && (
         <ul className={styles.dropdownContent}>
           {dropdownContent.map(([redirectPath, text]) => (
