@@ -9,8 +9,8 @@ import PartCard from '@/components/parts/part/partCard/PartCard';
 import PartFilter from '@/components/parts/part/partFilter/PartFilter';
 import { PartConfig } from '@/data/partsConfig';
 
-const Part = ({ partConfig }: PartParams) => {
-  const [parts, setParts] = useState([]);
+const Part = ({ partConfig }: PartProps) => {
+  const [parts, setParts] = useState<PartModel[]>([]);
   const [filters, setFilters] = useState({} as Record<string, string[]>);
 
   const onFilterChange = (filterName: string, optionValue: string) => {
@@ -38,18 +38,23 @@ const Part = ({ partConfig }: PartParams) => {
   };
 
   const mutation = useMutation({
-    mutationFn: (data: RequestPayload) => {
-      return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`, { params: data });
+    mutationFn: (data: RequestParams) => {
+      // return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`, { params: data });
+      return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`);
     },
 
-    onSuccess: response => {
-      console.log(filters);
-      alert('success');
+    onSuccess: (response: AxiosResponse<ResponsePayload>) => {
+      console.log(response.data)
+      setParts(response.data.items.map(item => ({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        primaryDetail: "temporary"
+      })))
     },
 
     onError: error => {
-      console.log(filters);
-      alert('failure');
+      console.log("failure")
     }
   });
 
@@ -64,27 +69,37 @@ const Part = ({ partConfig }: PartParams) => {
       </div>
 
       <div className={styles.partCardsContainer}>
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
-        <PartCard />
+        {parts.map((part) => (
+          <PartCard key={part.id} name={part.name} price={part.price} primaryDetail={part.primaryDetail} />
+        ))}
       </div>
     </div>
   );
 };
 
-interface PartParams {
+interface PartProps {
   partConfig: PartConfig;
 }
 
-interface RequestPayload {
-  filters: Record<string, string>;
+interface RequestParams {
+  filters: Record<string, string[]>;
+}
+
+interface ItemModel {
+  id: string;
+  name: string;
+  price: number;
+}
+
+interface ResponsePayload {
+  items: ItemModel[];
+}
+
+interface PartModel {
+  id: string;
+  name: string;
+  price: number;
+  primaryDetail: string;
 }
 
 export default Part;

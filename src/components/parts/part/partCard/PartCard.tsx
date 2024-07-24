@@ -4,21 +4,21 @@ import styles from './PartCard.module.scss';
 import Example from '@/assets/images/builder/example.png';
 import Button from '@/components/ui/form/button/Button';
 
-const PartCard = () => {
+const PartCard = ({ name, price, primaryDetail }: PartCardProps) => {
   return (
     <div className={styles.partCardContainer}>
       <Image src={Example} alt='Example' className={styles.partCardImg} />
 
       <div className={styles.partCardContent}>
-        <span>Name</span>
+        <span>{name}</span>
 
         <div className={styles.partCardDetailsContainer}>
           <div className={styles.partCardDetail}>
-            <span>Price</span>
+            <span>{price}</span>
           </div>
 
           <div className={styles.partCardDetail}>
-            <span>Type</span>
+            <span>{primaryDetail}</span>
           </div>
         </div>
 
@@ -27,5 +27,11 @@ const PartCard = () => {
     </div>
   );
 };
+
+interface PartCardProps {
+  name: string;
+  price: number;
+  primaryDetail: string;
+}
 
 export default PartCard;
