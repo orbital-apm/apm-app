@@ -3,12 +3,14 @@ import UserItem from '@/components/user/UserItems/UserItem/UserItem';
 
 const UserItems = ({ title, items }: UserItemsProps) => {
   return (
-    <div>
+    <div className={styles.userItemsContainer}>
       <h2>{title}</h2>
 
-      {items.map(item => (
-        <UserItem key='hi' name='hi' linkDest='/' />
-      ))}
+      <div className={styles.itemsContainer}>
+        {items.map(item => (
+          <UserItem key='hi' name='hi' description='hello' imageLink='' linkDest='/' price={2} />
+        ))}
+      </div>
     </div>
   );
 };

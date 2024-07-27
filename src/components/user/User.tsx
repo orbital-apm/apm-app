@@ -8,8 +8,6 @@ import Button from '@/components/ui/form/button/Button';
 const User = () => {
   return (
     <div className={styles.userContainer}>
-      <h2 className='title'>user</h2>
-
       <div className={styles.profileContainer}>
         <div className={styles.profilePictureBg}>
           <Image src={UserImage} alt='Profile picture' className={styles.profilePicture} />
@@ -18,11 +16,11 @@ const User = () => {
         <Button type='button' text='logout' />
       </div>
 
-      <UserItems title='builds' items={['hello']} />
+      <UserItems title='builds' items={['hello', 'hello']} />
 
       <UserItems title='listings' items={['hello']} />
     </div>
   );
-}
+};
 
 export default User;
