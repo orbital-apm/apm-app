@@ -3,7 +3,7 @@ import Link from 'next/link';
 import SearchBar from '@/components/pageHeader/searchBar/SearchBar';
 import Navbar from '@/components/pageHeader/navbar/Navbar';
 import styles from './PageHeader.module.scss';
-import IconsContainer from '@/components/pageHeader/userContainer/IconsContainer';
+import IconsContainer from '@/components/pageHeader/iconsContainer/IconsContainer';
 
 const PageHeader = () => {
   return (
