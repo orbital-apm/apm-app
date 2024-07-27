@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './UserItem.module.scss';
 import Example from '@/assets/images/builder/example.png';
 
-const UserItem = ({ name, description, imageLink, linkDest, price }: UserItemProps) => {
+const UserItem = ({ name, description, linkDest, price }: UserItemProps) => {
   return (
     <Link href={linkDest} className={styles.itemLinkContainer}>
       <div className={styles.itemContainer}>
@@ -25,7 +25,7 @@ const UserItem = ({ name, description, imageLink, linkDest, price }: UserItemPro
 interface UserItemProps {
   name: string;
   description: string;
-  imageLink: string;
+  // imageLink: string;
   linkDest: string;
   price?: number;
 }

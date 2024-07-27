@@ -8,7 +8,13 @@ const UserItems = ({ title, items }: UserItemsProps) => {
 
       <div className={styles.itemsContainer}>
         {items.map(item => (
-          <UserItem key='hi' name='hi' description='hello' imageLink='' linkDest='/' price={2} />
+          <UserItem
+            key={item.name}
+            name={item.name}
+            description={item.description}
+            linkDest={item.linkDest}
+            price={item.price}
+          />
         ))}
       </div>
     </div>
@@ -17,7 +23,14 @@ const UserItems = ({ title, items }: UserItemsProps) => {
 
 interface UserItemsProps {
   title: string;
-  items: string[];
+  items: UserItemModel[];
+}
+
+export interface UserItemModel {
+  name: string;
+  description: string;
+  linkDest: string;
+  price: number;
 }
 
 export default UserItems;
