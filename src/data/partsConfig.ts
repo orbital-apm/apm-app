@@ -1,4 +1,7 @@
+import { PartType } from '@/slices/builderSlice';
+
 export interface PartConfig {
+  type: PartType;
   path: string;
   filters: FilterConfig[];
 }
@@ -16,6 +19,7 @@ export interface FilterOption {
 
 export const partsConfig: Record<string, PartConfig> = {
   keycaps: {
+    type: 'keycaps',
     path: '/parts/keycaps',
     filters: [
       // {
@@ -51,6 +55,7 @@ export const partsConfig: Record<string, PartConfig> = {
     ]
   },
   kits: {
+    type: 'kit',
     path: '/parts/kits',
     filters: [
       // {
@@ -141,6 +146,7 @@ export const partsConfig: Record<string, PartConfig> = {
     ]
   },
   switches: {
+    type: 'switches',
     path: '/parts/switches',
     filters: [
       // {

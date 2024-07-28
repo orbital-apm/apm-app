@@ -16,15 +16,13 @@ const BuilderPart = ({ part, linkText, linkDest }: BuilderPartParams) => {
           <span>select {linkText}</span>
         </Link>
       ) : (
-        <>
-          {/*<span>{part.name}</span>*/}
-          <span>KBDFans KBD75 v3.1 Barebones DIY Light Blue Mechanical Keyboard</span>
+        <Link href={linkDest} className={styles.builderPartSelectedLink}>
+          <span>{part.name}</span>
 
           <Image src={Example} alt='Example' />
 
-          {/*<span>${part.price}</span>*/}
-          <span>$123</span>
-        </>
+          <span>${part.price.toFixed(2)}</span>
+        </Link>
       )}
     </div>
   );

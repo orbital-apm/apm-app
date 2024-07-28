@@ -39,10 +39,13 @@ const Part = ({ partConfig }: PartProps) => {
 
   const mutation = useMutation({
     mutationFn: (data: RequestParams) => {
-      const transformedData = Object.entries(data).reduce((acc, [key, value]) => {
-        acc[key] = value.join(',');
-        return acc;
-      }, {} as Record<string, string>);
+      const transformedData = Object.entries(data).reduce(
+        (acc, [key, value]) => {
+          acc[key] = value.join(',');
+          return acc;
+        },
+        {} as Record<string, string>
+      );
 
       return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`, {
         params: transformedData
@@ -77,7 +80,7 @@ const Part = ({ partConfig }: PartProps) => {
 
       <div className={styles.partCardsContainer}>
         {parts.map(part => (
-          <PartCard key={part.id} name={part.name} price={part.price} primaryDetail={part.primaryDetail} />
+          <PartCard key={part.id} type={partConfig.type} part={part} />
         ))}
       </div>
     </div>
@@ -100,7 +103,7 @@ interface ResponsePayload {
   items: ItemModel[];
 }
 
-interface PartModel {
+export interface PartModel {
   id: string;
   name: string;
   price: number;
