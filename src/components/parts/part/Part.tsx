@@ -58,6 +58,7 @@ const Part = ({ partConfig }: PartProps) => {
           id: item.id,
           name: item.name,
           price: item.price,
+          imageUrl: item.img_url,
           primaryDetail: 'temporary'
         }))
       );
@@ -98,6 +99,7 @@ interface ItemModel {
   id: string;
   name: string;
   price: number;
+  img_url: string;
 }
 
 interface ResponsePayload {
@@ -108,6 +110,7 @@ export interface PartModel {
   id: string;
   name: string;
   price: number;
+  imageUrl: string;
   primaryDetail: string;
 }
 

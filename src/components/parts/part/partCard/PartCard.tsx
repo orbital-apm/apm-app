@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import styles from './PartCard.module.scss';
-import Example from '@/assets/images/builder/example.png';
 import Button from '@/components/ui/form/button/Button';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { PartType, setPart } from '@/slices/builderSlice';
@@ -20,7 +19,7 @@ const PartCard = ({ type, part }: PartCardProps) => {
           id: part.id,
           name: part.name,
           price: part.price,
-          imageUrl: ''
+          imageUrl: part.imageUrl.split(' ').at(-2) || part.imageUrl.split(' ')[0]
         }
       })
     );
@@ -29,7 +28,13 @@ const PartCard = ({ type, part }: PartCardProps) => {
 
   return (
     <div className={styles.partCardContainer}>
-      <Image src={Example} alt='Example' className={styles.partCardImg} />
+      <Image
+        src={part.imageUrl.split(' ').at(-2) || part.imageUrl.split(' ')[0]}
+        alt={part.name}
+        className={styles.partCardImg}
+        width={256}
+        height={256}
+      />
 
       <div className={styles.partCardContent}>
         <span>{part.name}</span>
