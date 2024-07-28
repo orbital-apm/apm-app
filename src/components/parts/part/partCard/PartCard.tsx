@@ -24,7 +24,7 @@ const PartCard = ({ type, part }: PartCardProps) => {
         }
       })
     );
-    router.push('/builder')
+    router.push('/builder');
   };
 
   return (

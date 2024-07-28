@@ -65,6 +65,7 @@ const Part = ({ partConfig }: PartProps) => {
 
     onError: error => {
       console.log('failure');
+      console.log(error);
     }
   });
 

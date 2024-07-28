@@ -8,11 +8,7 @@ const PartFilter = ({ filterConfigs, onFilterChange }: PartFilterParams) => {
   return (
     <div className={styles.partFilterContainer}>
       {filterConfigs.map(filterConfig => (
-        <FilterCheckboxes
-          key={filterConfig.name}
-          filterConfig={filterConfig}
-          onFilterChange={onFilterChange}
-        />
+        <FilterCheckboxes key={filterConfig.name} filterConfig={filterConfig} onFilterChange={onFilterChange} />
       ))}
     </div>
   );
