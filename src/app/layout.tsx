@@ -6,7 +6,7 @@ import '../styles/main.scss';
 
 export default function RootLayout({
   auth,
-  children,
+  children
 }: Readonly<{
   auth: React.ReactNode;
   children: React.ReactNode;

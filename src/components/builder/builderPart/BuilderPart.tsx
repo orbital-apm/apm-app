@@ -2,11 +2,11 @@ import Image from 'next/image';
 
 import styles from './BuilderPart.module.scss';
 import BuilderArrow from '@/assets/images/icons/builder-arrow.svg';
-import Example from '@/assets/images/builder/example.png';
 import { Keycaps, Kit, Switches } from '@/slices/builderSlice';
 import Link from 'next/link';
 
 const BuilderPart = ({ part, linkText, linkDest }: BuilderPartParams) => {
+  console.log(part);
   return (
     <div className={styles.builderPartContainer}>
       <Image src={BuilderArrow} alt='Builder arrow' />
@@ -16,15 +16,13 @@ const BuilderPart = ({ part, linkText, linkDest }: BuilderPartParams) => {
           <span>select {linkText}</span>
         </Link>
       ) : (
-        <>
-          {/*<span>{part.name}</span>*/}
-          <span>KBDFans KBD75 v3.1 Barebones DIY Light Blue Mechanical Keyboard</span>
+        <Link href={linkDest} className={styles.builderPartSelectedLink}>
+          <span>{part.name}</span>
 
-          <Image src={Example} alt='Example' />
+          <Image src={part.imageUrl} alt={part.name} height={200} width={200} />
 
-          {/*<span>${part.price}</span>*/}
-          <span>$123</span>
-        </>
+          <span>${part.price.toFixed(2)}</span>
+        </Link>
       )}
     </div>
   );

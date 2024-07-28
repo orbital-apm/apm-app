@@ -1,12 +1,12 @@
 export interface NavbarItem {
   label: [string, string];
-  dropdownContent?: Array<[string, string]>;
+  dropdownContent?: [string, string][];
 }
 
 export const navbarData: NavbarItem[] = [
   {
     label: ['/', 'home'],
-    dropdownContent: [['/', 'home']],
+    dropdownContent: [['/', 'home']]
   },
   {
     label: ['/builder', 'builder'],
@@ -14,8 +14,8 @@ export const navbarData: NavbarItem[] = [
       ['/parts/switches', 'switches'],
       ['/parts/keycaps', 'keycaps'],
       ['/parts/kits', 'kits'],
-      ['/parts/lubricants', 'lubricants'],
-    ],
+      ['/parts/lubricants', 'lubricants']
+    ]
   },
   {
     label: ['/guides', 'guides'],
@@ -23,14 +23,14 @@ export const navbarData: NavbarItem[] = [
       ['/guides/intro', 'intro'],
       ['/guides/keycaps', 'keycaps'],
       ['/guides/switches', 'switches'],
-      ['/guides/sizes', 'sizes'],
-    ],
+      ['/guides/sizes', 'sizes']
+    ]
   },
   {
     label: ['/', 'marketplace'],
-    dropdownContent: [['/', 'browse']],
+    dropdownContent: [['/', 'browse']]
   },
   {
-    label: ['/about', 'about us'],
-  },
+    label: ['/about', 'about us']
+  }
 ];

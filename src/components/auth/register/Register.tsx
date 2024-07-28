@@ -13,12 +13,12 @@ import FormTabs from '@/components/ui/form/formTabs/FormTabs';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { setIsAuthenticated } from '@/slices/authSlice';
 
-const tabs: Array<[string, string, boolean]> = [
+const tabs: [string, string, boolean][] = [
   ['/login', 'login', false],
-  ['/register', 'register', true],
+  ['/register', 'register', true]
 ];
 
-const validatePassword = (password: String, confirmPassword: string) => {
+const validatePassword = (password: string, confirmPassword: string) => {
   // TODO: Add password validation
   return password === confirmPassword;
 };
@@ -42,7 +42,7 @@ const Register = () => {
     onError: error => {
       setErrorMessage('Registration unsuccessful.');
       console.log(`Register failed: ${error}`);
-    },
+    }
   });
 
   const handleSubmit = (event: React.FormEvent<RegisterFormElement>) => {
@@ -56,7 +56,7 @@ const Register = () => {
       const requestPayload: RequestPayload = {
         email: formData.email.value,
         username: formData.username.value,
-        password: formData.password.value,
+        password: formData.password.value
       };
 
       mutation.mutate(requestPayload);

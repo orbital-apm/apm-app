@@ -11,7 +11,7 @@ export interface GuidesContentParams {
   text: string;
 }
 
-export const guidesContentData: { [key: string]: GuidesContentParams } = {
+export const guidesContentData: Record<string, GuidesContentParams> = {
   intro: {
     title: 'intro to mechanical keyboards.',
     imgSrc: IntroMainImg,
@@ -23,7 +23,7 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     And we haven't even talked about looks yet! Mechanical keyboards come in all sorts of styles. Want something that lights up like a Christmas tree? Done. Prefer a sleek, professional look? No problem. You can even mix and match keycaps to create your own unique style.<br><br>
     Now, I know what you're thinking: "This sounds expensive." And yeah, some mechanical keyboards can cost a pretty penny. But here's the thing – they're built to last. While your regular keyboard might give up the ghost after a year or two, a good mechanical keyboard can keep clicking away for a decade or more.<br><br>
     So, are you ready to dive into the world of mechanical keyboards? Trust me, once you start, you'll wonder how you ever typed on anything else. It's not just about typing faster or more accurately (though that can happen too). It's about enjoying every single keystroke. Welcome to your new obsession!
-    `,
+    `
   },
   keycaps: {
     title: 'a guide to keycaps.',
@@ -36,7 +36,7 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     Now, I know what you're thinking: "How do I even change these things?" Good news - it's super easy! Most keycaps just pop right off with a little tool (or even your fingers if you're careful). Then you just press the new ones on. It's like Lego for grown-ups!
     One last thing to keep in mind - make sure you're getting keycaps that fit your keyboard. Different keyboards use different layouts and sizes, especially for those pesky bottom row keys. But don't worry, most keycap sets come with enough options to fit most boards.
     So there you have it - the wonderful world of keycaps! Whether you want to jazz up your typing experience, make your keyboard match your room, or just have something fun to fidget with during long Zoom calls, keycaps are your new best friend. Welcome to the rabbit hole, my friend. Your wallet might hate you, but your fingers (and eyes) will thank you!
-    `,
+    `
   },
   switches: {
     title: 'a guide to switches.',
@@ -54,7 +54,7 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     Here's a pro tip: before you commit to a whole keyboard of one switch, try a switch tester. It's like a sampler platter for your fingers, letting you try out different switches to see what tickles your fancy.<br><br>
     And get this - some keyboards now let you hot-swap switches. That means you can pop different switches in and out without soldering. It's like being able to change the engine in your car just by opening the hood!<br><br>
     So there you have it - the wonderful world of switches. Whether you want a keyboard that feels like typing on clouds, or one that gives you a mini finger workout with every email, there's a switch out there for you. Welcome to the club, switch newbie. Your fingers are about to go on the adventure of a lifetime!
-    `,
+    `
   },
   sizes: {
     title: 'a guide to keyboard sizes.',
@@ -72,6 +72,6 @@ export const guidesContentData: { [key: string]: GuidesContentParams } = {
     The best part? Many of these come in hot-swappable versions, so you can mix and match switches to your heart's content. It's like being able to change not just the engine in your car, but the entire drivetrain on a whim!
     So there you have it - the wild and wonderful world of keyboard sizes and layouts. Whether you want a keyboard that dominates your desk or one that could fit in your pocket, there's a size and layout out there for you. <br><br>
     Welcome to the world where size doesn't just matter - it's everything!
-    `,
-  },
+    `
+  }
 };

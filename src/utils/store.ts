@@ -7,20 +7,20 @@ import builderReducer from '@/slices/builderSlice';
 
 const persistConfig = {
   key: 'root',
-  storage,
+  storage
 };
 
 export const store = configureStore({
   reducer: {
     auth: persistReducer(persistConfig, authReducer),
-    builder: persistReducer(persistConfig, builderReducer),
+    builder: persistReducer(persistConfig, builderReducer)
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: ['persist/PERSIST'],
-      },
-    }),
+        ignoredActions: ['persist/PERSIST']
+      }
+    })
 });
 
 export const persistor = persistStore(store);

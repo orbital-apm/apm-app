@@ -1,0 +1,21 @@
+@use '../../../styles/variables';
+
+.partContainer {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+
+.partFilter {
+  width: 10%;
+  min-width: 16rem;
+}
+
+.partCardsContainer {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  row-gap: 2rem;
+  column-gap: 4%;
+  flex-wrap: wrap;
+}
