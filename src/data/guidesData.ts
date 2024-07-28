@@ -20,12 +20,12 @@ export const guidesData: GuidesItem[] = [
   {
     linkDest: '/guides/keycaps',
     text: 'a guide to keycaps.',
-    imgSrc: KeycapsImg,
+    imgSrc: KeycapsImg
   },
   {
     linkDest: '/guides/switches',
     text: 'a guide to switches.',
-    imgSrc: SwitchesImg,
+    imgSrc: SwitchesImg
   },
   {
     linkDest: '/guides/sizes',
