@@ -30,24 +30,36 @@ export interface Kit {
 const initialState: BuilderState = {
   keycaps: null,
   switches: null,
-  kit: null,
+  kit: null
 };
+
+export type PartType = 'keycaps' | 'switches' | 'kit';
+
+interface SetPartPayload {
+  type: PartType;
+  data: Keycaps | Switches | Kit;
+}
 
 const builderSlice = createSlice({
   name: 'builder',
   initialState,
   reducers: {
-    setKeycaps: (state, action: PayloadAction<Keycaps>) => {
-      state.keycaps = action.payload;
-    },
-    setSwitches: (state, action: PayloadAction<Switches>) => {
-      state.switches = action.payload;
-    },
-    setKit: (state, action: PayloadAction<Kit>) => {
-      state.kit = action.payload;
-    },
-  },
+    setPart: (state, action: PayloadAction<SetPartPayload>) => {
+      const { type, data } = action.payload;
+      switch (type) {
+        case 'keycaps':
+          state.keycaps = data as Keycaps;
+          break;
+        case 'switches':
+          state.switches = data as Switches;
+          break;
+        case 'kit':
+          state.kit = data as Kit;
+          break;
+      }
+    }
+  }
 });
 
-export const { setKeycaps, setSwitches, setKit } = builderSlice.actions;
+export const { setPart } = builderSlice.actions;
 export default builderSlice.reducer;
