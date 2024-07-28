@@ -11,7 +11,7 @@ const Guide = ({ guidesContent }: GuideParams) => {
 
       <Image src={ArrowDown} alt='Arrow down' className={styles.clickableIconImage} />
 
-      <Image src={guidesContent.imgSrc} alt='intro to mechanical keyboards.' />
+      <Image src={guidesContent.imgSrc} alt='sub-image' />
 
       <p className={styles.guideText} dangerouslySetInnerHTML={createMarkup(guidesContent.text)} />
     </div>
