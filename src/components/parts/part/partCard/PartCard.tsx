@@ -4,7 +4,7 @@ import styles from './PartCard.module.scss';
 import Example from '@/assets/images/builder/example.png';
 import Button from '@/components/ui/form/button/Button';
 
-const PartCard = ({ name, price, primaryDetail }: PartCardProps) => {
+const PartCard = ({ name, price  }: PartCardProps) => {
   return (
     <div className={styles.partCardContainer}>
       <Image src={Example} alt='Example' className={styles.partCardImg} />
@@ -17,9 +17,9 @@ const PartCard = ({ name, price, primaryDetail }: PartCardProps) => {
             <span>${price.toFixed(2)}</span>
           </div>
 
-          <div className={styles.partCardDetail}>
-            <span>{primaryDetail}</span>
-          </div>
+          {/*<div className={styles.partCardDetail}>*/}
+          {/*  <span>{primaryDetail}</span>*/}
+          {/*</div>*/}
         </div>
 
         <Button type='button' text='select' />

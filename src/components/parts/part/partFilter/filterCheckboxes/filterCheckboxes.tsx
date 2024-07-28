@@ -10,7 +10,7 @@ const FilterCheckboxes = ({ filterConfig, onFilterChange }: FilterCheckboxesPara
 
       {filterConfig.options.map(option => (
         <label key={option.name} className={styles.filterCheckboxContainer}>
-          <input type='checkbox' onChange={() => onFilterChange(filterConfig.queryParamKey, option.value.toString())} />
+          <input type='checkbox' onChange={() => onFilterChange(filterConfig.queryParamKey, option.value)} />
           <span>{option.name}</span>
         </label>
       ))}
