@@ -14,7 +14,7 @@ const PartCard = ({ name, price, primaryDetail }: PartCardProps) => {
 
         <div className={styles.partCardDetailsContainer}>
           <div className={styles.partCardDetail}>
-            <span>{price}</span>
+            <span>${price.toFixed(2)}</span>
           </div>
 
           <div className={styles.partCardDetail}>

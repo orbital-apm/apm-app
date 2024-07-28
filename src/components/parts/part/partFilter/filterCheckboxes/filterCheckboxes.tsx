@@ -1,16 +1,17 @@
 'use client';
 
 import styles from './filterCheckboxes.module.scss';
+import { FilterConfig } from '@/data/partsConfig';
 
-const FilterCheckboxes = ({ filterName, options, onFilterChange }: FilterCheckboxesParams) => {
+const FilterCheckboxes = ({ filterConfig, onFilterChange }: FilterCheckboxesParams) => {
   return (
     <div className={styles.filterCheckboxesContainer}>
-      <span className={styles.filterCheckboxesFilterName}>{filterName}</span>
+      <span className={styles.filterCheckboxesFilterName}>{filterConfig.name}</span>
 
-      {options.map(optionValue => (
-        <label key={optionValue} className={styles.filterCheckboxContainer}>
-          <input type='checkbox' onChange={() => onFilterChange(filterName, optionValue)} />
-          <span>{optionValue}</span>
+      {filterConfig.options.map(option => (
+        <label key={option.name} className={styles.filterCheckboxContainer}>
+          <input type='checkbox' onChange={() => onFilterChange(filterConfig.queryParamKey, option.value.toString())} />
+          <span>{option.name}</span>
         </label>
       ))}
     </div>
@@ -18,8 +19,7 @@ const FilterCheckboxes = ({ filterName, options, onFilterChange }: FilterCheckbo
 };
 
 interface FilterCheckboxesParams {
-  filterName: string;
-  options: string[];
+  filterConfig: FilterConfig;
   onFilterChange: (filterName: string, optionValue: string) => void;
 }
 

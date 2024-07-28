@@ -13,9 +13,9 @@ const Part = ({ partConfig }: PartProps) => {
   const [parts, setParts] = useState<PartModel[]>([]);
   const [filters, setFilters] = useState({} as Record<string, string[]>);
 
-  const onFilterChange = (filterName: string, optionValue: string) => {
+  const onFilterChange = (filterKey: string, optionValue: string) => {
     setFilters(prevFilters => {
-      const currentValues = prevFilters[filterName] || [];
+      const currentValues = prevFilters[filterKey] || [];
       let newValues;
 
       if (currentValues.includes(optionValue)) {
@@ -26,40 +26,47 @@ const Part = ({ partConfig }: PartProps) => {
 
       if (newValues.length === 0) {
         const newFilters = { ...prevFilters };
-        delete newFilters[filterName];
+        delete newFilters[filterKey];
         return newFilters;
       }
 
       return {
         ...prevFilters,
-        [filterName]: newValues
+        [filterKey]: newValues
       };
     });
   };
 
   const mutation = useMutation({
     mutationFn: (data: RequestParams) => {
-      // return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`, { params: data });
-      return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`);
+      const transformedData = Object.entries(data).reduce((acc, [key, value]) => {
+        acc[key] = value.join(',');
+        return acc;
+      }, {} as Record<string, string>);
+
+      return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`, {
+        params: transformedData
+      });
     },
 
     onSuccess: (response: AxiosResponse<ResponsePayload>) => {
-      console.log(response.data)
-      setParts(response.data.items.map(item => ({
-        id: item.id,
-        name: item.name,
-        price: item.price,
-        primaryDetail: "temporary"
-      })))
+      setParts(
+        response.data.items.map(item => ({
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          primaryDetail: 'temporary'
+        }))
+      );
     },
 
     onError: error => {
-      console.log("failure")
+      console.log('failure');
     }
   });
 
   useEffect(() => {
-    mutation.mutate({ filters: filters });
+    mutation.mutate(filters);
   }, [filters]);
 
   return (
@@ -69,7 +76,7 @@ const Part = ({ partConfig }: PartProps) => {
       </div>
 
       <div className={styles.partCardsContainer}>
-        {parts.map((part) => (
+        {parts.map(part => (
           <PartCard key={part.id} name={part.name} price={part.price} primaryDetail={part.primaryDetail} />
         ))}
       </div>
@@ -81,9 +88,7 @@ interface PartProps {
   partConfig: PartConfig;
 }
 
-interface RequestParams {
-  filters: Record<string, string[]>;
-}
+type RequestParams = Record<string, string[]>;
 
 interface ItemModel {
   id: string;

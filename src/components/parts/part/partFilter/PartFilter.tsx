@@ -10,8 +10,7 @@ const PartFilter = ({ filterConfigs, onFilterChange }: PartFilterParams) => {
       {filterConfigs.map(filterConfig => (
         <FilterCheckboxes
           key={filterConfig.name}
-          filterName={filterConfig.name}
-          options={filterConfig.options}
+          filterConfig={filterConfig}
           onFilterChange={onFilterChange}
         />
       ))}
@@ -21,7 +20,7 @@ const PartFilter = ({ filterConfigs, onFilterChange }: PartFilterParams) => {
 
 interface PartFilterParams {
   filterConfigs: FilterConfig[];
-  onFilterChange: (filterName: string, optionValue: string) => void;
+  onFilterChange: (filterKey: string, optionValue: string) => void;
 }
 
 export default PartFilter;
