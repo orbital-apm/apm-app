@@ -72,7 +72,7 @@ export const partsConfig: Record<string, PartConfig> = {
       // },
       {
         name: 'layout ergo',
-        queryParamKey: 'layout__in',
+        queryParamKey: 'layout_ergonomic__in',
         options: [
           { name: 'alice', value: 'Alice' },
           { name: 'split', value: 'Split' },
@@ -131,7 +131,7 @@ export const partsConfig: Record<string, PartConfig> = {
         queryParamKey: 'material__in',
         options: [
           { name: 'metal', value: 'Metal' },
-          { name: 'aluminium', value: 'Aluminium' },
+          { name: 'aluminum', value: 'Aluminum' },
           { name: 'plastic', value: 'Plastic' }
         ]
       },
