@@ -2,6 +2,7 @@ import React from 'react';
 
 import PageHeader from '@/components/pageHeader/PageHeader';
 import Provider from '@/components/provider/Provider';
+import Footer from '@/components/footer/Footer';
 import '../styles/main.scss';
 
 export default function RootLayout({
@@ -20,6 +21,7 @@ export default function RootLayout({
           {children}
         </Provider>
       </body>
+      <Footer/>
     </html>
   );
 }
