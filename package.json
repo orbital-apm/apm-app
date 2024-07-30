@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "email": "email dev --dir src/emails",
+    "email": "email dev --dir src/templates",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -1,9 +1,8 @@
-// app/api/contact/route.ts
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import Contact from '@/emails/contact';
+import Contact from '@/templates/contact';
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_CONTACT_APIKEY);
+const resend = new Resend(process.env.RESEND_CONTACT_API_KEY);
 
 export async function POST(request: Request) {
   try {
