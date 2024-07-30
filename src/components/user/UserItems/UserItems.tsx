@@ -27,6 +27,7 @@ interface UserItemsProps {
 }
 
 export interface UserItemModel {
+  id: string;
   name: string;
   description: string;
   linkDest: string;
