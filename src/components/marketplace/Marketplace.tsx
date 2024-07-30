@@ -7,6 +7,7 @@ import ArrowDown from '@/assets/images/icons/arrow-down.svg';
 import RowCard from '@/components/marketplace/rowCard/RowCard';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import Button from '@/components/ui/form/button/Button';
+import Link from 'next/link';
 
 const Marketplace = () => {
   const isAuthenticated = useAppSelector(state => state.auth.isAuthenticated);
@@ -19,8 +20,13 @@ const Marketplace = () => {
 
       {isAuthenticated && (
         <>
-          <Button type='button' text='create a listing' />
+          <Link href='/marketplace/listings/new'>
+            <Button type='button' text='create listing' />
+          </Link>
+
           <span>or</span>
+
+          <h3 className={styles.listingsTitle}>browse listings</h3>
         </>
       )}
 

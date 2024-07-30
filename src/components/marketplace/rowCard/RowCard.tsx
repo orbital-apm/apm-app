@@ -16,7 +16,7 @@ const RowCard = ({ name, description, linkDest, price }: UserItemProps) => {
 
           <p className={styles.itemDescription}>{description}</p>
 
-          {price && <p className={styles.itemPrice}>${price.toFixed(2)}</p>}
+          <p className={styles.itemPrice}>${price.toFixed(2)}</p>
         </div>
       </div>
     </Link>
