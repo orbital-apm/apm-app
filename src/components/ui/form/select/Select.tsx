@@ -4,7 +4,9 @@ const Select = ({ id, required, options }: SelectProps) => {
   return (
     <select id={id} required={required} className={styles.select}>
       {options.map(([name, value]) => (
-        <option key={value} value={value}>{name}</option>
+        <option key={value} value={value}>
+          {name}
+        </option>
       ))}
     </select>
   );

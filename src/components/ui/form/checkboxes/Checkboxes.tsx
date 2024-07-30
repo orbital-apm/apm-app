@@ -24,7 +24,7 @@ const Checkboxes = ({ options, selectedValues, onChange }: CheckboxesProps) => {
       ))}
     </div>
   );
-}
+};
 
 interface Option {
   value: string;
