@@ -75,7 +75,6 @@ const ContactForm = () => {
         <Button
           type='submit'
           text={isSubmitting ? 'Sending...' : 'Submit'}
-          onClickFn={() => {}} // The form's onSubmit will handle this
         />
       </form>
     </div>

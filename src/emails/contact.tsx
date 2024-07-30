@@ -1,4 +1,4 @@
-import { Body, Container, Head, Hr, Html, Img, Link, Preview, Section, Text } from '@react-email/components';
+import { Body, Container, Head, Hr, Html, Link, Preview, Section, Text } from '@react-email/components';
 import * as React from 'react';
 
 interface ContactEmailProps {
