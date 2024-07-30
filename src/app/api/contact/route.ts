@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       from: 'Contact Form <onboarding@resend.dev>',
       to: 'orbital-apm@outlook.com',
       reply_to: email,
-      subject: enquiry,
+      subject: `actions-per-minute Support: ${enquiry}`,
       react: Contact({ senderEmail: email, message, enquiry}),
     });
 

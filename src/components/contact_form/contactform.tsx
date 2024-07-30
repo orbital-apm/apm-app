@@ -49,7 +49,7 @@ const ContactForm = () => {
         Feel free to contact us through this form! 😊
       </p>
       <FormTab redirectPath="/about" text="Contact Form" selected={true} />
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className={styles.formContainer}>
         <Input
           id="email"
           type="email"
