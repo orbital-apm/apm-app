@@ -1,0 +1,61 @@
+@use '../../styles/variables';
+
+.footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-family: 'Space Grotesk';
+}
+
+.footerSection {
+  flex: 1;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: #666;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+  font-family: 'Space Grotesk';
+
+  p {
+    color: #666;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

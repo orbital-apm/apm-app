@@ -19,9 +19,9 @@ export default function RootLayout({
           <PageHeader />
           {auth}
           {children}
+          <Footer />
         </Provider>
       </body>
-      <Footer/>
     </html>
   );
 }

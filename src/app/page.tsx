@@ -10,7 +10,7 @@ const Home = () => {
       <div className={styles.cardsContainer}>
         <LinkCard cardText='build.' imgSrc={BuildCardImage} linkDest='/builder' />
         <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='/guides' />
-        <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='' />
+        <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='/marketplace' />
       </div>
     </main>
   );
