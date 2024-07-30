@@ -8,17 +8,13 @@ const conditionMapping: Record<number, string> = {
   4: 'like new',
   3: 'lightly used',
   2: 'well used',
-  1: 'heavily used',
+  1: 'heavily used'
 };
 
 const ListingCard = ({ listing }: ListingCardProps) => {
   return (
     <div className={styles.cardContainer}>
-      <Image
-        src={PlaceholderImage}
-        alt={listing.title}
-        className={styles.cardImage}
-      />
+      <Image src={PlaceholderImage} alt={listing.title} className={styles.cardImage} />
 
       <div className={styles.cardTitle}>
         <span className={styles.cardTitleText}>{listing.title}</span>
@@ -28,7 +24,6 @@ const ListingCard = ({ listing }: ListingCardProps) => {
         <span className={styles.cardDetail}>${listing.price.toFixed(2)}</span>
         <span className={styles.cardDetail}>{conditionMapping[listing.condition]}</span>
       </div>
-
     </div>
   );
 };

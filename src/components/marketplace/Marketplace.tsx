@@ -7,7 +7,6 @@ import axios from 'axios';
 
 import styles from './Marketplace.module.scss';
 import ArrowDown from '@/assets/images/icons/arrow-down.svg';
-import RowCard from '@/components/marketplace/rowCard/RowCard';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import Button from '@/components/ui/form/button/Button';
 import ListingCard from '@/components/marketplace/listingCard/ListingCard';
@@ -42,9 +41,7 @@ const Marketplace = () => {
       )}
 
       <div className={styles.listingsContainer}>
-        {data?.items.map(listing => (
-          <ListingCard key={listing.id} listing={listing} />
-        ))}
+        {data?.items.map(listing => <ListingCard key={listing.id} listing={listing} />)}
       </div>
     </div>
   );
