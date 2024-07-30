@@ -10,6 +10,7 @@ import ArrowDown from '@/assets/images/icons/arrow-down.svg';
 import RowCard from '@/components/marketplace/rowCard/RowCard';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import Button from '@/components/ui/form/button/Button';
+import ListingCard from '@/components/marketplace/listingCard/ListingCard';
 
 const Marketplace = () => {
   const isAuthenticated = useAppSelector(state => state.auth.isAuthenticated);
@@ -42,13 +43,7 @@ const Marketplace = () => {
 
       <div className={styles.listingsContainer}>
         {data?.items.map(listing => (
-          <RowCard
-            key={listing.id}
-            name={listing.title}
-            description={listing.description}
-            linkDest='/marketplace'
-            price={listing.price}
-          />
+          <ListingCard key={listing.id} listing={listing} />
         ))}
       </div>
     </div>

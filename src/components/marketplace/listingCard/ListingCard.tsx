@@ -21,12 +21,12 @@ const ListingCard = ({ listing }: ListingCardProps) => {
       />
 
       <div className={styles.cardTitle}>
-        <span>{listing.title}</span>
+        <span className={styles.cardTitleText}>{listing.title}</span>
       </div>
 
       <div className={styles.cardDetailsContainer}>
-        <span>${listing.price.toFixed(2)}</span>
-        <span>{conditionMapping[listing.condition]}</span>
+        <span className={styles.cardDetail}>${listing.price.toFixed(2)}</span>
+        <span className={styles.cardDetail}>{conditionMapping[listing.condition]}</span>
       </div>
 
     </div>
