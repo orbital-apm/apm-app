@@ -72,10 +72,7 @@ const ContactForm = () => {
           onChange={e => setMessage(e.target.value)}
           required
         />
-        <Button
-          type='submit'
-          text={isSubmitting ? 'Sending...' : 'Submit'}
-        />
+        <Button type='submit' text={isSubmitting ? 'Sending...' : 'Submit'} />
       </form>
     </div>
   );
