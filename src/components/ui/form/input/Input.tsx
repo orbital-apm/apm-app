@@ -7,9 +7,12 @@ const Input = ({ id, type, placeholder, required, value, onChange }: InputProps)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let inputValue = e.target.value;
 
-    if (type === 'number') {
+    if (type === 'price') {
       // Allow only numbers and up to one decimal point
       inputValue = inputValue.replace(/[^0-9.]/g, '');
+
+      // Prefix with $ sign
+      inputValue = inputValue.length > 0 ? '$' + inputValue : '';
 
       // Ensure only one decimal point
       const parts = inputValue.split('.');
@@ -30,7 +33,7 @@ const Input = ({ id, type, placeholder, required, value, onChange }: InputProps)
   return (
     <input
       id={id}
-      type={type === 'number' ? 'text' : type}
+      type={type === 'price' ? 'text' : type}
       placeholder={placeholder}
       value={value || inputValue}
       onChange={onChange || handleChange}
