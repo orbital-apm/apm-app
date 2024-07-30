@@ -1,0 +1,22 @@
+@use '../../styles/variables';
+
+.marketplaceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  margin-top: 4rem;
+}
+
+.listingsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.listingsTitle {
+  font-size: 2rem;
+  font-weight: 100;
+}

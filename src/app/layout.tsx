@@ -5,10 +5,10 @@ import Provider from '@/components/provider/Provider';
 import '../styles/main.scss';
 
 export default function RootLayout({
-  auth,
+  modal,
   children
 }: Readonly<{
-  auth: React.ReactNode;
+  modal: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
         <Provider>
           <PageHeader />
-          {auth}
+          {modal}
           {children}
         </Provider>
       </body>
