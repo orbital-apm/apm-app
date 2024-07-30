@@ -1,8 +1,7 @@
-// components/ContactForm.tsx
 'use client';
 
 import { useState } from 'react';
-import styles from './Contact.module.scss';
+import styles from './ContactForm.module.scss';
 import Button from '@/components/ui/form/button/Button';
 import FormTab from '@/components/ui/form/formTabs/formTab/FormTab';
 import Input from '@/components/ui/form/input/Input';
@@ -43,8 +42,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={`${styles.contactFormContainer} max-w-md mx-auto mt-10 p-6`}>
-      <h2 className='text-2xl font-bold mb-4'>Contact Us</h2>
+    <div className={styles.contactFormContainer}>
+      <h2>Contact Us</h2>
       <p className='mb-6'>Feel free to contact us through this form! 😊</p>
       <FormTab redirectPath='/about' text='Contact Form' selected={true} />
       <form onSubmit={handleSubmit} className={styles.formContainer}>

@@ -1,6 +1,6 @@
 import AboutComponent from '@/components/about/About';
 import { aboutUsContent } from '@/data/aboutContentData';
-import ContactForm from '@/components/contact_form/contactform';
+import ContactForm from '@/components/contactForm/ContactForm';
 
 const About = () => {
   return (
