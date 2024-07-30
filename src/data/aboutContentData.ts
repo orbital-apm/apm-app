@@ -1,4 +1,3 @@
-// import AboutMainImg from '@/assets/images/about/placeholder-1.jpg';
 import AboutMainImg from '@/assets/images/guides/sizes/sizes-1.png';
 import { StaticImageData } from 'next/image';
 
