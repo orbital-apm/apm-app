@@ -1,14 +1,17 @@
 import styles from './Input.module.scss';
 
 const Input = ({ id, type, placeholder, required, value, onChange }: InputProps) => {
-  return <input 
-          id={id} 
-          type={type} 
-          placeholder={placeholder} 
-          className={styles.input} 
-          required={required}
-          value={value}
-          onChange={onChange} />;
+  return (
+    <input
+      id={id}
+      type={type}
+      placeholder={placeholder}
+      className={styles.input}
+      required={required}
+      value={value}
+      onChange={onChange}
+    />
+  );
 };
 
 interface InputProps {

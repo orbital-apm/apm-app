@@ -20,9 +20,9 @@ const ContactForm = () => {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, enquiry, message }),
+        body: JSON.stringify({ email, enquiry, message })
       });
       const data = await response.json();
       if (data.success) {
@@ -44,40 +44,38 @@ const ContactForm = () => {
 
   return (
     <div className={`${styles.contactFormContainer} max-w-md mx-auto mt-10 p-6`}>
-      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-      <p className="mb-6">
-        Feel free to contact us through this form! 😊
-      </p>
-      <FormTab redirectPath="/about" text="Contact Form" selected={true} />
+      <h2 className='text-2xl font-bold mb-4'>Contact Us</h2>
+      <p className='mb-6'>Feel free to contact us through this form! 😊</p>
+      <FormTab redirectPath='/about' text='Contact Form' selected={true} />
       <form onSubmit={handleSubmit} className={styles.formContainer}>
         <Input
-          id="email"
-          type="email"
-          placeholder="Your email"
+          id='email'
+          type='email'
+          placeholder='Your email'
           required={true}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
         />
         <Input
-          id="enquiry"
-          type="text"
-          placeholder="Your enquiry"
+          id='enquiry'
+          type='text'
+          placeholder='Your enquiry'
           required={true}
           value={enquiry}
-          onChange={(e) => setEnquiry(e.target.value)}
+          onChange={e => setEnquiry(e.target.value)}
         />
         <Input
-          id="message"
-          type="text"
-          placeholder="Your message"
+          id='message'
+          type='text'
+          placeholder='Your message'
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={e => setMessage(e.target.value)}
           required
         />
         <Button
-          type="submit"
+          type='submit'
           text={isSubmitting ? 'Sending...' : 'Submit'}
-          onClickFn={() => {}}  // The form's onSubmit will handle this
+          onClickFn={() => {}} // The form's onSubmit will handle this
         />
       </form>
     </div>

@@ -14,15 +14,12 @@ export async function POST(request: Request) {
       to: 'orbital-apm@outlook.com',
       reply_to: email,
       subject: `actions-per-minute Support: ${enquiry}`,
-      react: Contact({ senderEmail: email, message, enquiry}),
+      react: Contact({ senderEmail: email, message, enquiry })
     });
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error('Failed to send email:', error);
-    return NextResponse.json(
-      { success: false, error: 'Failed to send email' },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: false, error: 'Failed to send email' }, { status: 500 });
   }
 }
