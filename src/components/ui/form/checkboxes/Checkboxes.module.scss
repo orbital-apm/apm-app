@@ -1,0 +1,14 @@
+@use '../../../../styles/variables';
+
+.checkboxesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.checkboxContainer {
+  display: flex;
+  column-gap: 0.5rem;
+  padding: 0 1rem;
+}

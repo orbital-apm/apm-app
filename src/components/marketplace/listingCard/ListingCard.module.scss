@@ -1,0 +1,53 @@
+@use '../../../styles/variables';
+
+.cardContainer {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.cardImage {
+  border: 0.125rem solid variables.$alt-bg-color;
+  border-radius: 0.25rem;
+}
+
+.cardTitle {
+  border-radius: 0.25rem;
+  background-color: variables.$alt-bg-color;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardTitleText {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardDetailsContainer {
+  border-radius: 0.25rem;
+  border: 0.125rem solid variables.$alt-text-color;
+  background-color: variables.$alt-bg-color;
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cardDetail {
+  width: 50%;
+  text-align: center;
+}
+
+.cardDetail:first-child {
+  border-right: 0.0625rem solid variables.$alt-text-color;
+}

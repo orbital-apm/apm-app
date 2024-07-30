@@ -1,0 +1,26 @@
+@use '../../styles/variables';
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilePictureBg {
+  background-color: variables.$alt-bg-color;
+  border-radius: 50%;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.profilePicture {
+  height: 5rem;
+  width: 5rem;
+}

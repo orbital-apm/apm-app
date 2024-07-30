@@ -11,10 +11,9 @@ export const navbarData: NavbarItem[] = [
   {
     label: ['/builder', 'builder'],
     dropdownContent: [
-      ['/parts/switches', 'switches'],
       ['/parts/keycaps', 'keycaps'],
-      ['/parts/kits', 'kits'],
-      ['/parts/lubricants', 'lubricants']
+      ['/parts/switches', 'switches'],
+      ['/parts/kits', 'kits']
     ]
   },
   {
@@ -27,7 +26,7 @@ export const navbarData: NavbarItem[] = [
     ]
   },
   {
-    label: ['/', 'marketplace'],
+    label: ['/marketplace', 'marketplace'],
     dropdownContent: [['/', 'browse']]
   },
   {

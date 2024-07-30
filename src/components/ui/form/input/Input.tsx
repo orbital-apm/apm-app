@@ -1,25 +1,55 @@
 import styles from './Input.module.scss';
+import { useState } from 'react';
 
 const Input = ({ id, type, placeholder, required, value, onChange }: InputProps) => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let inputValue = e.target.value;
+
+    if (type === 'price') {
+      // Allow only numbers and up to one decimal point
+      inputValue = inputValue.replace(/[^0-9.]/g, '');
+
+      // Prefix with $ sign
+      inputValue = inputValue.length > 0 ? '$' + inputValue : '';
+
+      // Ensure only one decimal point
+      const parts = inputValue.split('.');
+      if (parts.length > 2) {
+        parts.pop();
+        inputValue = parts.join('.');
+      }
+
+      // Limit to two decimal places
+      if (parts[1] && parts[1].length > 2) {
+        inputValue = parts[0] + '.' + parts[1].slice(0, 2);
+      }
+    }
+
+    setInputValue(inputValue);
+  };
+
   return (
     <input
       id={id}
-      type={type}
+      type={type === 'price' ? 'text' : type}
       placeholder={placeholder}
-      className={styles.input}
+      value={value || inputValue}
+      onChange={onChange || handleChange}
       required={required}
-      value={value}
-      onChange={onChange}
+      className={styles.input}
     />
   );
 };
 
+// Todo: Cleanup
 interface InputProps {
   id: string;
   type: string;
   placeholder: string;
-  value?: string;
   required: boolean;
+  value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
