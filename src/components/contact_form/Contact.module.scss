@@ -1,0 +1,11 @@
+@use '../../styles/variables';
+
+.contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  margin-top: 2rem;
+  font-family: 'Roboto Serif';
+}
+

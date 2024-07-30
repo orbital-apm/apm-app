@@ -30,7 +30,7 @@ export const Contact = ({
       <Body style={main}>
         <Container style={container}>
           <Text style={title}>
-            <strong>orbital-apm@outlook.com</strong>, you have received an inquiry from someone.
+            <strong>orbital-apm@outlook.com</strong>, it looks like you have received an inquiry from someone.
           </Text>
   
           <Section style={section}>
@@ -58,7 +58,10 @@ export const Contact = ({
             </Text>
           </Section>
           <Text style={footer}>
-            actions-per-minute <Link href="https://actions-per-minute.netlify.app/" style={link}> build your keyboards here.</Link>
+            actions-per-minute. 
+          </Text>
+          <Text style={footer}>
+          <Link href="https://actions-per-minute.netlify.app/" style={link}> build your keyboards here.</Link>
           </Text>
         </Container>
       </Body>
@@ -110,7 +113,7 @@ const paragraph = {
   };
 
 const msg = {
-    margin: "0 0 10px 0",
+    margin: "0 0 20px 0",
     textAlign: "center" as const,
 }
   
