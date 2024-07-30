@@ -7,6 +7,7 @@
   box-shadow: variables.$shadow 0 0.2rem 0.2rem;
   padding: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .linkCardContent {
@@ -19,6 +20,9 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+  font-family: 'Space Grotesk';
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 .linkCardImage {
@@ -27,4 +31,12 @@
   position: absolute;
   top: 0;
   right: 0;
+  transition: transform 0.5s ease;
+}
+
+.linkCardContainer:hover {
+  box-shadow: variables.$shadow 0 0.5rem 0.5rem;
+  .linkCardImage {
+    transform: scale(1.1);
+  }
 }

@@ -32,7 +32,7 @@ const IconsContainer = () => {
       ) : (
         <>
           <ClickableIcon imgSrc={UserImage} altText='User' linkDest='/user' />
-          <ClickableIcon imgSrc={CartImage} altText='Cart' linkDest='/cart' />
+          <ClickableIcon imgSrc={CartImage} altText='Cart' linkDest='/builder' />
         </>
       )}
     </div>
