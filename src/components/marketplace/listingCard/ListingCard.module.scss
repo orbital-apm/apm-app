@@ -6,6 +6,12 @@
   flex-direction: column;
   align-items: center;
   row-gap: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.2s ease;
+}
+
+.cardContainer:hover {
+  box-shadow: variables.$shadow 0 0.2rem 0.2rem;
 }
 
 .cardImage {
