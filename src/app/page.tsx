@@ -7,10 +7,21 @@ import LinkCard from '@/components/home/linkCard/LinkCard';
 const Home = () => {
   return (
     <main className={styles.mainContainer}>
+      
       <div className={styles.cardsContainer}>
         <LinkCard cardText='build.' imgSrc={BuildCardImage} linkDest='/builder' />
         <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='/guides' />
         <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='/marketplace' />
+      </div>
+      <div className={styles.videoContainer}>
+        <iframe
+          width="1000"
+          height="600"
+          src="https://www.youtube.com/embed/40IfwX076qU"
+          title="Orbital Project Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
     </main>
   );
