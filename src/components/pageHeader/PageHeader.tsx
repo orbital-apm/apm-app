@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import SearchBar from '@/components/pageHeader/searchBar/SearchBar';
+// import SearchBar from '@/components/pageHeader/searchBar/SearchBar';
 import Navbar from '@/components/pageHeader/navbar/Navbar';
 import styles from './PageHeader.module.scss';
 import IconsContainer from '@/components/pageHeader/iconsContainer/IconsContainer';
@@ -14,7 +14,7 @@ const PageHeader = () => {
         </Link>
 
         <div className={styles.searchBarContainer}>
-          <SearchBar />
+          {/*<SearchBar />*/}
         </div>
 
         <IconsContainer />
