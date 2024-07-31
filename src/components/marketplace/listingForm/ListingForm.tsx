@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 
 import styles from './ListingForm.module.scss';
@@ -42,6 +42,7 @@ const partTypeOptions = [
 ];
 
 const ListingForm = () => {
+  const queryClient = useQueryClient();
   const router = useRouter();
   const [errorMessage, setErrorMessage] = useState('');
   const [partTypes, setPartTypes] = useState<string[]>([]);
@@ -54,6 +55,7 @@ const ListingForm = () => {
     },
 
     onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['listings'] });
       router.back();
     },
 

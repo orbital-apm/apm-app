@@ -1,0 +1,22 @@
+@use '../../styles/variables';
+
+.carouselContainer {
+  width: 60%;
+}
+
+.paginationActive {
+  background-color: variables.$bg-color;
+}
+
+.slideContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideImage {
+  height: 20rem;
+  width: auto;
+  border-radius: 0.5rem;
+}
