@@ -19,7 +19,6 @@ const ListingDetails = ({ listingId }: ListingDetailsProps) => {
     queryKey: ['listing'],
     queryFn: async () => {
       const response = await axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}/v1/listings/${listingId}`);
-      console.log(response.data);
       return response.data;
     }
   });
@@ -47,7 +46,9 @@ const ListingDetails = ({ listingId }: ListingDetailsProps) => {
 
       <hr />
 
-      <ListingContactForm />
+      {data?.id && data?.user_id && data?.title && (
+        <ListingContactForm sellerId={data.user_id} listingTitle={data.title} listingLink='/' />
+      )}
     </div>
   );
 };

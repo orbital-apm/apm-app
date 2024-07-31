@@ -6,20 +6,20 @@ const resend = new Resend(process.env.RESEND_CONTACT_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { senderEmail, receiverEmail, listing, enquiry, message, listingLink } = await request.json();
+    const { sellerEmail, senderEmail, listingTitle, listingLink, enquiry, message } = await request.json();
 
     const data = await resend.emails.send({
       from: 'APM Marketplace <onboarding@resend.dev>',
-      to: receiverEmail,
+      to: sellerEmail,
       reply_to: senderEmail,
-      subject: `For ${listing}: ${enquiry}`,
+      subject: `For ${listingTitle}: ${enquiry}`,
       react: listingInquiry({
-        senderEmail,
-        receiverEmail,
-        listing,
-        enquiry,
-        message,
-        listingLink
+        receiverEmail: sellerEmail,
+        senderEmail: senderEmail,
+        listingTitle: listingTitle,
+        listingLink: listingLink,
+        message: message,
+        enquiry: enquiry
       })
     });
 

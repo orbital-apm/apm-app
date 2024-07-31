@@ -8,14 +8,7 @@ import Button from '@/components/ui/form/button/Button';
 import FormTab from '@/components/ui/form/formTabs/formTab/FormTab';
 import Input from '@/components/ui/form/input/Input';
 
-interface ListingFormProps {
-  listingId: string;
-  sellerId: string;
-  listingTitle: string;
-  listingLink: string;
-}
-
-const ListingContactForm: React.FC<ListingFormProps> = ({ listingId, sellerId, listingTitle, listingLink }) => {
+const ListingContactForm = ({ sellerId, listingTitle, listingLink }: ListingContactFormProps) => {
   const [senderEmail, setEmail] = useState('');
   const [enquiry, setEnquiry] = useState('');
   const [message, setMessage] = useState('');
@@ -26,8 +19,10 @@ const ListingContactForm: React.FC<ListingFormProps> = ({ listingId, sellerId, l
     setIsSubmitting(true);
 
     try {
-      const sellerEmail = await axios.get(`/users/${sellerId}/email`);
-      const response = await fetch('/api/contact', {
+      const sellerEmail = (
+        await axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}/v1/users/${sellerId}/email`)
+      ).data;
+      const response = await fetch('/api/listings_contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -35,7 +30,6 @@ const ListingContactForm: React.FC<ListingFormProps> = ({ listingId, sellerId, l
         body: JSON.stringify({
           sellerEmail,
           senderEmail,
-          listingId,
           listingTitle,
           listingLink,
           enquiry,
@@ -97,5 +91,11 @@ const ListingContactForm: React.FC<ListingFormProps> = ({ listingId, sellerId, l
     </div>
   );
 };
+
+interface ListingContactFormProps {
+  sellerId: string;
+  listingTitle: string;
+  listingLink: string;
+}
 
 export default ListingContactForm;

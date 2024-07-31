@@ -4,19 +4,20 @@ import * as React from 'react';
 interface ListingEmailProps {
   senderEmail: string;
   receiverEmail: string;
-  listing: string;
+  listingTitle: string;
   enquiry: string;
   message: string;
   listingLink: string;
 }
 
+// Todo: listingLink
 export const listingInquiry = ({
-  listingLink,
-  senderEmail,
   receiverEmail,
+  senderEmail,
+  listingTitle,
+  // listingLink,
   message,
-  enquiry,
-  listing
+  enquiry
 }: ListingEmailProps) => (
   <Html>
     <Head />
@@ -29,11 +30,11 @@ export const listingInquiry = ({
 
         <Section style={section}>
           <Text style={text}>
-            Hey <strong>{senderEmail}</strong>!
+            Hey <strong>{receiverEmail}</strong>!
           </Text>
           <Text style={text}>Someone recently left a message about your listing:</Text>
           <Text style={text}>
-            <strong>{listing}</strong>
+            <strong>{listingTitle}</strong>
           </Text>
           <Hr></Hr>
           <Text style={text}>
@@ -46,8 +47,13 @@ export const listingInquiry = ({
             <strong>Message:</strong>
           </Text>
           <Text style={msg}>{message}</Text>
+          <Text style={paragraph}>
+            <strong>Enquiry:</strong>
+          </Text>
+          <Text style={msg}>{enquiry}</Text>
           <Button
-            href={listingLink}
+            // href={listingLink}
+            href='https://actions-per-minute.netlify.app'
             style={{ background: '#000000', color: '#ffffff', padding: '12px 20px', borderRadius: '12px' }}
           >
             View your listing
@@ -68,7 +74,7 @@ export const listingInquiry = ({
 listingInquiry.PreviewProps = {
   senderEmail: 'monluphone@gmail.com',
   receiverEmail: 'orbital-apm@outlook.com',
-  listing: 'Epomaker V2 Urban',
+  listingTitle: 'Epomaker V2 Urban',
   listingLink: 'https://actions-per-minute.netlify.app/builder',
   enquiry: 'Test',
   message: 'Hello!'
