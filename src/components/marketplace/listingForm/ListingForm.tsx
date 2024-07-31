@@ -29,7 +29,7 @@ const partTypeOptions = [
   },
   {
     value: 'switches',
-    label: 'swithces'
+    label: 'switches'
   },
   {
     value: 'kits',
