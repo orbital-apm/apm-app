@@ -4,18 +4,34 @@ import Image from 'next/image';
 
 import SearchImage from '@/assets/images/icons/search.svg';
 import styles from './SearchBar.module.scss';
+import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ searchFn }: SearchBarProps) => {
+  const submitHandler = (event: React.FormEvent<SearchFormElement>) => {
+    event.preventDefault();
+    searchFn(event.currentTarget.elements.searchCriteria.value);
+  };
+
   return (
-    <div className={styles.searchContainer}>
-      <input className={styles.searchInput} placeholder='' />
-      <button className={styles.searchButton} onClick={() => alert('hello')}>
+    <form className={styles.searchContainer} onSubmit={submitHandler}>
+      <input id='searchCriteria' className={styles.searchInput} placeholder='' />
+      <button type='submit' className={styles.searchButton}>
         <Image src={SearchImage} alt='Search' className={styles.searchIcon} />
       </button>
-    </div>
+    </form>
   );
 };
 
-export default SearchBar;
+interface SearchBarProps {
+  searchFn: (searchCriteria: string) => void;
+}
 
-// Todo: Separate button icon into new component and make that the client component instead.
+interface FormElements extends HTMLFormControlsCollection {
+  searchCriteria: HTMLInputElement;
+}
+
+interface SearchFormElement extends HTMLFormElement {
+  readonly elements: FormElements;
+}
+
+export default SearchBar;

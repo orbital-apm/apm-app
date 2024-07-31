@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import axios, { AxiosResponse } from 'axios';
 
@@ -8,13 +8,21 @@ import styles from './Part.module.scss';
 import PartCard from '@/components/parts/part/partCard/PartCard';
 import PartFilter from '@/components/parts/part/partFilter/PartFilter';
 import { PartConfig } from '@/data/partsConfig';
+import SearchBar from '@/components/pageHeader/searchBar/SearchBar';
 
 // Todo: Cleanup
 const Part = ({ partConfig }: PartProps) => {
   const [parts, setParts] = useState<PartModel[]>([]);
   const [filters, setFilters] = useState({} as Record<string, string[]>);
+  const [searchCriteria, setSearchCriteria] = useState('');
   const [page, setPage] = useState(1);
   const observer = useRef<IntersectionObserver | null>(null);
+
+  const onSearchSubmit = (searchCriteria: string) => {
+    setSearchCriteria(searchCriteria);
+    setPage(1);
+    setParts([]);
+  };
 
   const onFilterChange = (filterKey: string, optionValue: string) => {
     setFilters(prevFilters => {
@@ -53,7 +61,7 @@ const Part = ({ partConfig }: PartProps) => {
       );
 
       return axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}${partConfig.path}`, {
-        params: { ...transformedData, page: data.page }
+        params: { ...transformedData, custom_search: data.searchCriteria, page: data.page }
       });
     },
 
@@ -87,8 +95,8 @@ const Part = ({ partConfig }: PartProps) => {
   }, []);
 
   useEffect(() => {
-    mutation.mutate({ filters, page });
-  }, [filters, page]);
+    mutation.mutate({ filters, searchCriteria, page });
+  }, [filters, searchCriteria, page]);
 
   return (
     <div className={styles.partContainer}>
@@ -96,16 +104,19 @@ const Part = ({ partConfig }: PartProps) => {
         <PartFilter filterConfigs={partConfig.filters} onFilterChange={onFilterChange} />
       </div>
 
-      <div className={styles.partCardsContainer}>
-        {parts.map((part, index) => (
-          <div
-            key={index}
-            ref={index === parts.length - 1 ? lastPartElementRef : null}
-            className={styles.cardContainer}
-          >
-            <PartCard type={partConfig.type} part={part} />
-          </div>
-        ))}
+      <div className={styles.partCardsAndSearch}>
+        <SearchBar searchFn={onSearchSubmit} />
+        <div className={styles.partCardsContainer}>
+          {parts.map((part, index) => (
+            <div
+              key={index}
+              ref={index === parts.length - 1 ? lastPartElementRef : null}
+              className={styles.cardContainer}
+            >
+              <PartCard type={partConfig.type} part={part} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -117,6 +128,7 @@ interface PartProps {
 
 interface RequestParams {
   filters: Record<string, string[]>;
+  searchCriteria: string;
   page: number;
 }
 
