@@ -7,9 +7,10 @@ interface ListingEmailProps {
   listing: string;
   enquiry: string;
   message: string;
+  listingLink: string;
 }
 
-export const listingInquiry = ({ senderEmail, receiverEmail, message, enquiry, listing }: ListingEmailProps) => (
+export const listingInquiry = ({ listingLink, senderEmail, receiverEmail, message, enquiry, listing }: ListingEmailProps) => (
   <Html>
     <Head />
     <Preview>Someone is interested in your listing!</Preview>
@@ -37,8 +38,8 @@ export const listingInquiry = ({ senderEmail, receiverEmail, message, enquiry, l
           </Text>
           <Text style={msg}>{message}</Text>
           <Button
-            href="https://example.com"
-            style={{color: '#71b084', padding: '10px 10px'}}
+            href={listingLink}
+            style={{background: "#000000", color: '#ffffff', padding: '12px 20px', borderRadius: '12px'}}
             >
                 View your listing
           </Button>
@@ -59,8 +60,9 @@ listingInquiry.PreviewProps = {
   senderEmail: 'monluphone@gmail.com',
   receiverEmail: 'orbital-apm@outlook.com',
   listing: 'Epomaker V2 Urban',
-  message: 'Hello!',
+  listingLink: 'https://actions-per-minute.netlify.app/builder',
   enquiry: 'Test',
+  message: 'Hello!'
 } as ListingEmailProps;
 
 export default listingInquiry;
