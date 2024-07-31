@@ -5,11 +5,10 @@ export interface NavbarItem {
 
 export const navbarData: NavbarItem[] = [
   {
-    label: ['/', 'home'],
-    dropdownContent: [['/', 'home']]
+    label: ['/', 'Home']
   },
   {
-    label: ['/builder', 'builder'],
+    label: ['/builder', 'Builder'],
     dropdownContent: [
       ['/parts/keycaps', 'keycaps'],
       ['/parts/switches', 'switches'],
@@ -17,7 +16,7 @@ export const navbarData: NavbarItem[] = [
     ]
   },
   {
-    label: ['/guides', 'guides'],
+    label: ['/guides', 'Guides'],
     dropdownContent: [
       ['/guides/intro', 'intro'],
       ['/guides/keycaps', 'keycaps'],
@@ -26,10 +25,10 @@ export const navbarData: NavbarItem[] = [
     ]
   },
   {
-    label: ['/marketplace', 'marketplace'],
-    dropdownContent: [['/', 'browse']]
+    label: ['/marketplace', 'Marketplace'],
+    dropdownContent: [['/marketplace', 'browse']]
   },
   {
-    label: ['/about', 'about us']
+    label: ['/about', 'About Us']
   }
 ];
