@@ -13,9 +13,7 @@ const PageHeader = () => {
           <h1>actions per minute.</h1>
         </Link>
 
-        <div className={styles.searchBarContainer}>
-          {/*<SearchBar />*/}
-        </div>
+        <div className={styles.searchBarContainer}>{/*<SearchBar />*/}</div>
 
         <IconsContainer />
       </div>

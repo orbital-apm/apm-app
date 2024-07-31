@@ -22,7 +22,7 @@ const Part = ({ partConfig }: PartProps) => {
     setSearchCriteria(searchCriteria);
     setPage(1);
     setParts([]);
-  }
+  };
 
   const onFilterChange = (filterKey: string, optionValue: string) => {
     setFilters(prevFilters => {

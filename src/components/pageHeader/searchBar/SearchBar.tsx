@@ -9,8 +9,8 @@ import React from 'react';
 const SearchBar = ({ searchFn }: SearchBarProps) => {
   const submitHandler = (event: React.FormEvent<SearchFormElement>) => {
     event.preventDefault();
-    searchFn(event.currentTarget.elements.searchCriteria.value)
-  }
+    searchFn(event.currentTarget.elements.searchCriteria.value);
+  };
 
   return (
     <form className={styles.searchContainer} onSubmit={submitHandler}>
@@ -31,7 +31,7 @@ interface FormElements extends HTMLFormControlsCollection {
 }
 
 interface SearchFormElement extends HTMLFormElement {
-  readonly elements: FormElements
+  readonly elements: FormElements;
 }
 
 export default SearchBar;
