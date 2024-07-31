@@ -27,8 +27,8 @@ const Builder = () => {
 
       <Image src={ArrowDown} alt='Arrow down' />
       <div className={styles.compatibilityChecker}>
-              <p>Your products are compatible!</p>
-          </div>
+        <p>Your products are compatible!</p>
+      </div>
 
       <div className={styles.builderGridContainer}>
         <Image src={KeyboardLayers} alt='Keyboard layers' className={styles.builderImg} />
@@ -40,7 +40,6 @@ const Builder = () => {
         <div className={styles.builderSwitches}>
           <BuilderPart part={switches} linkText='switches' linkDest='/parts/switches' />
         </div>
-        
 
         <div className={styles.builderKits}>
           <BuilderPart part={kit} linkText='kits' linkDest='/parts/kits' />
