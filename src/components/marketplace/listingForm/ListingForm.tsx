@@ -55,7 +55,7 @@ const ListingForm = () => {
     },
 
     onSuccess: () => {
-      queryClient.invalidateQueries('listings');
+      queryClient.invalidateQueries({ queryKey: ['listings'] })
       router.back();
     },
 
