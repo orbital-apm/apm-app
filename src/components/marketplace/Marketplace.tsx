@@ -41,7 +41,9 @@ const Marketplace = () => {
       )}
 
       <div className={styles.listingsContainer}>
-        {data?.items.map(listing => <ListingCard key={listing.id} listing={listing} />)}
+        {data?.items.map(listing => (
+          <ListingCard key={listing.id} listing={listing} linkDest={`/marketplace/listings/${listing.id}`} />
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,13 @@
+@use '../../../styles/variables';
+
+.detailsContainer {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.detailLabel {
+  text-decoration: underline;
+  font-weight: 700;
+}
