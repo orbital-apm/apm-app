@@ -13,9 +13,19 @@ const Home = () => {
         <LinkCard cardText='learn.' imgSrc={LearnCardImage} linkDest='/guides' />
         <LinkCard cardText='trade.' imgSrc={TradeCardImage} linkDest='/marketplace' />
       </div>
-
       <div>
         <Carousel />
+      </div>
+      <hr color='#CDCDCD'></hr>
+      <div className={styles.videoContainer}>
+        <iframe
+          width='1000'
+          height='600'
+          src='https://www.youtube.com/embed/40IfwX076qU'
+          title='Orbital Project Video'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
   );
