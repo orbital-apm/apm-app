@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import styles from './ListingCard.module.scss';
 import PlaceholderImage from '@/assets/images/guides/keycaps/keycaps-1.png';
+import Link from 'next/link';
 
 const conditionMapping: Record<number, string> = {
   5: 'brand new',
@@ -11,9 +12,9 @@ const conditionMapping: Record<number, string> = {
   1: 'heavily used'
 };
 
-const ListingCard = ({ listing }: ListingCardProps) => {
+const ListingCard = ({ listing, linkDest }: ListingCardProps) => {
   return (
-    <div className={styles.cardContainer}>
+    <Link href={linkDest} className={styles.cardContainer}>
       <Image src={PlaceholderImage} alt={listing.title} className={styles.cardImage} />
 
       <div className={styles.cardTitle}>
@@ -24,12 +25,13 @@ const ListingCard = ({ listing }: ListingCardProps) => {
         <span className={styles.cardDetail}>${listing.price.toFixed(2)}</span>
         <span className={styles.cardDetail}>{conditionMapping[listing.condition]}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 
 interface ListingCardProps {
   listing: Listing;
+  linkDest: string;
 }
 
 interface Listing {
