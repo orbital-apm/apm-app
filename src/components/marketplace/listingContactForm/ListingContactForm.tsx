@@ -1,13 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './ContactForm.module.scss';
+import axios from 'axios';
+
+import styles from './ListingContactForm.module.scss';
 import Button from '@/components/ui/form/button/Button';
 import FormTab from '@/components/ui/form/formTabs/formTab/FormTab';
 import Input from '@/components/ui/form/input/Input';
 
-const ContactForm = () => {
-  const [email, setEmail] = useState('');
+const ListingContactForm = ({ sellerId, listingTitle, listingLink }: ListingContactFormProps) => {
+  const [senderEmail, setEmail] = useState('');
   const [enquiry, setEnquiry] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,13 +17,24 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     try {
-      const response = await fetch('/api/contact', {
+      const sellerEmail = (
+        await axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}/v1/users/${sellerId}/email`)
+      ).data;
+      const response = await fetch('/api/listings_contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, enquiry, message })
+        body: JSON.stringify({
+          sellerEmail,
+          senderEmail,
+          listingTitle,
+          listingLink,
+          enquiry,
+          message
+        })
       });
       const data = await response.json();
       if (data.success) {
@@ -29,7 +42,7 @@ const ContactForm = () => {
         setEmail('');
         setEnquiry('');
         setMessage('');
-        console.log('Received data:', { email, enquiry, message });
+        console.log('Received data:', { enquiry, message });
       } else {
         alert('Failed to send message. Please try again.');
       }
@@ -42,9 +55,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={styles.contactFormContainer}>
-      <h2>Contact Us</h2>
-      <p className='mb-6'>Feel free to contact us through this form! 😊</p>
+    <div className={styles.listingFormContainer}>
+      <h2>listings inquiry.</h2>
+      <p className='mb-6'>Ask about the listing through this form!</p>
       <FormTab redirectPath='/about' text='Contact Form' selected={true} />
       <form onSubmit={handleSubmit} className={styles.formContainer}>
         <Input
@@ -52,7 +65,7 @@ const ContactForm = () => {
           type='email'
           placeholder='Your email'
           required={true}
-          value={email}
+          value={senderEmail}
           onChange={e => setEmail(e.target.value)}
         />
         <Input
@@ -71,10 +84,18 @@ const ContactForm = () => {
           onChange={e => setMessage(e.target.value)}
           required
         />
-        <Button type='submit' text={isSubmitting ? 'Sending...' : 'Submit'} />
+        <div className={styles.submitContainer}>
+          <Button type='submit' text={isSubmitting ? 'Sending...' : 'Submit'} />
+        </div>
       </form>
     </div>
   );
 };
 
-export default ContactForm;
+interface ListingContactFormProps {
+  sellerId: string;
+  listingTitle: string;
+  listingLink: string;
+}
+
+export default ListingContactForm;

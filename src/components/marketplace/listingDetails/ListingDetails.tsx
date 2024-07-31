@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
 import styles from './ListingDetails.module.scss';
+import ListingContactForm from '@/components/marketplace/listingContactForm/ListingContactForm';
 
 const conditionMapping: Record<number, string> = {
   5: 'brand new',
@@ -18,7 +19,6 @@ const ListingDetails = ({ listingId }: ListingDetailsProps) => {
     queryKey: ['listing'],
     queryFn: async () => {
       const response = await axios.get(`${process.env.NEXT_PUBLIC_APM_SERVICE_BASE_URL}/v1/listings/${listingId}`);
-      console.log(response.data);
       return response.data;
     }
   });
@@ -43,6 +43,12 @@ const ListingDetails = ({ listingId }: ListingDetailsProps) => {
       )}
       <span className={styles.detailLabel}>price</span>
       <span>${data?.price}</span>
+
+      <hr />
+
+      {data?.id && data?.user_id && data?.title && (
+        <ListingContactForm sellerId={data.user_id} listingTitle={data.title} listingLink='/' />
+      )}
     </div>
   );
 };

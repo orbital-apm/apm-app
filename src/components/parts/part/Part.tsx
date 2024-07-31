@@ -18,10 +18,12 @@ const Part = ({ partConfig }: PartProps) => {
   const [page, setPage] = useState(1);
   const observer = useRef<IntersectionObserver | null>(null);
 
-  const onSearchSubmit = (searchCriteria: string) => {
-    setSearchCriteria(searchCriteria);
-    setPage(1);
-    setParts([]);
+  const onSearchSubmit = (newSearchCriteria: string) => {
+    if (newSearchCriteria !== searchCriteria) {
+      setSearchCriteria(newSearchCriteria);
+      setPage(1);
+      setParts([]);
+    }
   };
 
   const onFilterChange = (filterKey: string, optionValue: string) => {

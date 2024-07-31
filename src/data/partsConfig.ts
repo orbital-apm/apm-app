@@ -34,10 +34,10 @@ export const partsConfig: Record<string, PartConfig> = {
         name: 'material',
         queryParamKey: 'material__in',
         options: [
-          { name: 'abs', value: 'ABS' },
-          { name: 'pbt', value: 'PBT' },
-          { name: 'pc', value: 'PC' },
-          { name: 'ceramic', value: 'Ceramic' }
+          { name: 'ABS', value: 'ABS' },
+          { name: 'PBT', value: 'PBT' },
+          { name: 'PC', value: 'PC' },
+          { name: 'Ceramic', value: 'Ceramic' }
         ]
       },
       // {
@@ -48,8 +48,8 @@ export const partsConfig: Record<string, PartConfig> = {
         name: 'availability',
         queryParamKey: 'availability__in',
         options: [
-          { name: 'in stock', value: 'true' },
-          { name: 'out of stock', value: 'false' }
+          { name: 'In stock', value: 'true' },
+          { name: 'Out of stock', value: 'false' }
         ]
       }
     ]
@@ -74,41 +74,41 @@ export const partsConfig: Record<string, PartConfig> = {
         name: 'layout ergo',
         queryParamKey: 'layout_ergonomic__in',
         options: [
-          { name: 'alice', value: 'Alice' },
-          { name: 'split', value: 'Split' },
-          { name: 'ortholinear', value: 'Ortholinear' }
+          { name: 'Alice', value: 'Alice' },
+          { name: 'Split', value: 'Split' },
+          { name: 'Ortholinear', value: 'Ortholinear' }
         ]
       },
       {
         name: 'hotswappable',
         queryParamKey: 'hotswappable__in',
         options: [
-          { name: 'hotswappable', value: 'true' },
-          { name: 'non-hotswappable', value: 'false' }
+          { name: 'Hotswappable', value: 'true' },
+          { name: 'Non-hotswappable', value: 'false' }
         ]
       },
       {
         name: 'knob support',
         queryParamKey: 'knob_support__in',
         options: [
-          { name: 'knob support', value: 'true' },
-          { name: 'no knob support', value: 'false' }
+          { name: 'Knob support', value: 'true' },
+          { name: 'No knob support', value: 'false' }
         ]
       },
       {
         name: 'rgb',
         queryParamKey: 'rgb_support__in',
         options: [
-          { name: 'rgb', value: 'true' },
-          { name: 'non-rgb', value: 'false' }
+          { name: 'RGB', value: 'true' },
+          { name: 'Non-RGB', value: 'false' }
         ]
       },
       {
         name: 'display support',
         queryParamKey: 'display_support__in',
         options: [
-          { name: 'display support', value: 'true' },
-          { name: 'no display support', value: 'false' }
+          { name: 'Display support', value: 'true' },
+          { name: 'No display support', value: 'false' }
         ]
       },
       // {
@@ -119,28 +119,28 @@ export const partsConfig: Record<string, PartConfig> = {
         name: 'mount style',
         queryParamKey: 'mount_style__in',
         options: [
-          { name: 'top mount', value: 'Top Mount' },
-          { name: 'gasket mount', value: 'Gasket Mount' },
-          { name: 'pcb mount', value: 'PCB Mount' },
-          { name: 'plate mount', value: 'Plate Mount' },
-          { name: 'tray mount', value: 'Tray Mount' }
+          { name: 'Top Mount', value: 'Top Mount' },
+          { name: 'Gasket Mount', value: 'Gasket Mount' },
+          { name: 'PCB Mount', value: 'PCB Mount' },
+          { name: 'Plate Mount', value: 'Plate Mount' },
+          { name: 'Tray Mount', value: 'Tray Mount' }
         ]
       },
       {
         name: 'material',
         queryParamKey: 'material__in',
         options: [
-          { name: 'metal', value: 'Metal' },
-          { name: 'aluminum', value: 'Aluminum' },
-          { name: 'plastic', value: 'Plastic' }
+          { name: 'Metal', value: 'Metal' },
+          { name: 'Aluminum', value: 'Aluminum' },
+          { name: 'Plastic', value: 'Plastic' }
         ]
       },
       {
         name: 'availability',
         queryParamKey: 'availability__in',
         options: [
-          { name: 'in stock', value: 'true' },
-          { name: 'out of stock', value: 'false' }
+          { name: 'In stock', value: 'true' },
+          { name: 'Out of stock', value: 'false' }
         ]
       }
     ]
@@ -165,17 +165,17 @@ export const partsConfig: Record<string, PartConfig> = {
         name: 'switch type',
         queryParamKey: 'switch_type__in',
         options: [
-          { name: 'linear', value: 'Linear' },
-          { name: 'tactile', value: 'Tactile' },
-          { name: 'clicky', value: 'Clicky' }
+          { name: 'Linear', value: 'Linear' },
+          { name: 'Tactile', value: 'Tactile' },
+          { name: 'Clicky', value: 'Clicky' }
         ]
       },
       {
         name: 'availability',
         queryParamKey: 'availability__in',
         options: [
-          { name: 'in stock', value: 'true' },
-          { name: 'out of stock', value: 'false' }
+          { name: 'In stock', value: 'true' },
+          { name: 'Out of stock', value: 'false' }
         ]
       }
     ]

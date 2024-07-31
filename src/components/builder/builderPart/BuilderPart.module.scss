@@ -5,16 +5,46 @@
   grid-template-columns: 1fr 3fr;
   align-items: center;
   justify-items: center;
+  font-family: 'Space Grotesk';
 }
 
 .builderPartSelectButton {
-  background-color: variables.$alt-bg-color;
   width: 100%;
   display: flex;
+  position: relative;
+  overflow: hidden;
   justify-content: center;
-  align-items: center;
+  transition: background 500ms;
+  color: #000000;
   padding: 0.75rem;
+  font-size: 1.5rem;
+  outline: 0;
+  border: 0;
   border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  &:hover {
+    background-color: #666;
+  }
+
+  &:focus {
+    box-shadow:
+      0 0 0 2px #fff,
+      0 0 0 4px #666;
+  }
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(1.1);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .builderPartSelectedLink {

@@ -1,0 +1,22 @@
+@use '../../../styles/variables';
+
+.listingFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  margin-top: 2rem;
+  font-family: 'Roboto Serif';
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  width: 80%;
+}
+
+.submitContainer {
+  margin-top: 1rem;
+}
