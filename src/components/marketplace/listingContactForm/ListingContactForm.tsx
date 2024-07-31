@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import axios from 'axios';
+
 import styles from './ListingContactForm.module.scss';
 import Button from '@/components/ui/form/button/Button';
 import FormTab from '@/components/ui/form/formTabs/formTab/FormTab';
@@ -89,7 +90,9 @@ const ListingContactForm: React.FC<ListingFormProps> = ({ listingId, sellerId, l
           onChange={e => setMessage(e.target.value)}
           required
         />
-        <Button type='submit' text={isSubmitting ? 'Sending...' : 'Submit'} />
+        <div className={styles.submitContainer}>
+          <Button type='submit' text={isSubmitting ? 'Sending...' : 'Submit'} />
+        </div>
       </form>
     </div>
   );

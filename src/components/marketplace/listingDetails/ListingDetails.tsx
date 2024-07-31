@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
 import styles from './ListingDetails.module.scss';
+import ListingContactForm from '@/components/marketplace/listingContactForm/ListingContactForm';
 
 const conditionMapping: Record<number, string> = {
   5: 'brand new',
@@ -43,6 +44,10 @@ const ListingDetails = ({ listingId }: ListingDetailsProps) => {
       )}
       <span className={styles.detailLabel}>price</span>
       <span>${data?.price}</span>
+
+      <hr />
+
+      <ListingContactForm />
     </div>
   );
 };
