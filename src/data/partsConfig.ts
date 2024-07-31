@@ -37,7 +37,7 @@ export const partsConfig: Record<string, PartConfig> = {
           { name: 'abs', value: 'ABS' },
           { name: 'pbt', value: 'PBT' },
           { name: 'pc', value: 'PC' },
-          { name: 'ceramic', value: 'CERAMIC' }
+          { name: 'ceramic', value: 'Ceramic' }
         ]
       },
       // {
