@@ -16,9 +16,11 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Provider>
-          <PageHeader />
-          {modal}
-          {children}
+          <div className='content'>
+            <PageHeader />
+            {modal}
+            {children}
+          </div>
           <Footer />
         </Provider>
       </body>

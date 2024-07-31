@@ -6,7 +6,6 @@ import { Keycaps, Kit, Switches } from '@/slices/builderSlice';
 import Link from 'next/link';
 
 const BuilderPart = ({ part, linkText, linkDest }: BuilderPartParams) => {
-  console.log(part);
   return (
     <div className={styles.builderPartContainer}>
       <Image src={BuilderArrow} alt='Builder arrow' />
