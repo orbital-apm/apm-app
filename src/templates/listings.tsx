@@ -10,7 +10,14 @@ interface ListingEmailProps {
   listingLink: string;
 }
 
-export const listingInquiry = ({ listingLink, senderEmail, receiverEmail, message, enquiry, listing }: ListingEmailProps) => (
+export const listingInquiry = ({
+  listingLink,
+  senderEmail,
+  receiverEmail,
+  message,
+  enquiry,
+  listing
+}: ListingEmailProps) => (
   <Html>
     <Head />
     <Preview>Someone is interested in your listing!</Preview>
@@ -25,7 +32,9 @@ export const listingInquiry = ({ listingLink, senderEmail, receiverEmail, messag
             Hey <strong>{senderEmail}</strong>!
           </Text>
           <Text style={text}>Someone recently left a message about your listing:</Text>
-          <Text style={text}><strong>{listing}</strong></Text>
+          <Text style={text}>
+            <strong>{listing}</strong>
+          </Text>
           <Hr></Hr>
           <Text style={text}>
             <strong>From:</strong> {senderEmail}
@@ -39,9 +48,9 @@ export const listingInquiry = ({ listingLink, senderEmail, receiverEmail, messag
           <Text style={msg}>{message}</Text>
           <Button
             href={listingLink}
-            style={{background: "#000000", color: '#ffffff', padding: '12px 20px', borderRadius: '12px'}}
-            >
-                View your listing
+            style={{ background: '#000000', color: '#ffffff', padding: '12px 20px', borderRadius: '12px' }}
+          >
+            View your listing
           </Button>
         </Section>
         <Text style={footer}>actions per minute.</Text>

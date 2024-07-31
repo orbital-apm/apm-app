@@ -1,12 +1,12 @@
 import MarketplaceComponent from '@/components/marketplace/Marketplace';
-import ListingsForm from '@/components/listingForm/ListingForm';
+import ListingContactForm from '@/components/marketplace/listingContactForm/ListingContactForm';
 
 const Marketplace = () => {
   return (
     <main>
       <MarketplaceComponent />
       <hr></hr>
-      <ListingsForm />
+      <ListingContactForm />
     </main>
   );
 };

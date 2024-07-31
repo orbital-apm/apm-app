@@ -13,13 +13,14 @@ export async function POST(request: Request) {
       to: receiverEmail,
       reply_to: senderEmail,
       subject: `For ${listing}: ${enquiry}`,
-      react: listingInquiry({ 
-        senderEmail, 
-        receiverEmail, 
+      react: listingInquiry({
+        senderEmail,
+        receiverEmail,
         listing,
         enquiry,
-        message, 
-        listingLink })
+        message,
+        listingLink
+      })
     });
 
     return NextResponse.json({ success: true, data });

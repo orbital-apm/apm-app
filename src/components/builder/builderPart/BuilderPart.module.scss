@@ -28,7 +28,9 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #666;
+    box-shadow:
+      0 0 0 2px #fff,
+      0 0 0 4px #666;
   }
 
   .ripple {
@@ -45,7 +47,6 @@
   }
 }
 
-
 .builderPartSelectedLink {
   width: 100%;
   display: grid;
@@ -53,4 +54,3 @@
   align-items: center;
   justify-items: center;
 }
-
