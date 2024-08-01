@@ -6,6 +6,7 @@
   align-items: center;
   justify-items: center;
   font-family: 'Space Grotesk';
+  position: relative;
 }
 
 .builderPartSelectButton {
@@ -23,6 +24,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
+
   &:hover {
     background-color: #666;
   }
@@ -53,4 +55,25 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+}
+
+.closeButton {
+  position: absolute;
+  right: 0;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: variables.$alt-bg-color;
+  transition: box-shadow 300ms;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: variables.$shadow 0 0 0.25rem;
+  }
+
+  img {
+    margin: auto;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
 }
