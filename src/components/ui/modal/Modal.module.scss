@@ -19,6 +19,8 @@
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   box-shadow: variables.$shadow 0 0.1rem 0.1rem;
+  max-height: 80%;
+  overflow-y: auto;
 }
 
 .closeContainer {
