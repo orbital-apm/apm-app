@@ -4,6 +4,10 @@
     "eslint:recommended",
     "prettier",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/stylistic"
+    "plugin:@typescript-eslint/stylistic",
+    "plugin:testing-library/react"
+  ],
+  "plugins": [
+    "testing-library"
   ]
 }
