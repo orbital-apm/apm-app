@@ -47,4 +47,5 @@ jobs:
         run: |
           bun run lint
           bun run prettier-check
+          bun run test
           bun run build

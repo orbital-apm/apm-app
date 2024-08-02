@@ -7,7 +7,5 @@
     "plugin:@typescript-eslint/stylistic",
     "plugin:testing-library/react"
   ],
-  "plugins": [
-    "testing-library"
-  ]
+  "plugins": ["testing-library"]
 }
