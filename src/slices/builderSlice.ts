@@ -57,9 +57,18 @@ const builderSlice = createSlice({
           state.kit = data as Kit;
           break;
       }
+    },
+    unsetKeycaps: state => {
+      state.keycaps = null;
+    },
+    unsetSwitches: state => {
+      state.switches = null;
+    },
+    unsetKit: state => {
+      state.kit = null;
     }
   }
 });
 
-export const { setPart } = builderSlice.actions;
+export const { setPart, unsetKeycaps, unsetSwitches, unsetKit } = builderSlice.actions;
 export default builderSlice.reducer;

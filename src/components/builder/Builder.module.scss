@@ -19,9 +19,14 @@
     'image kit'
     'image costs';
   align-items: center;
+
+  div {
+    height: 10rem;
+  }
 }
 
 .builderImg {
+  height: 100%;
   grid-area: image;
   justify-self: right;
 }
